@@ -1,125 +1,237 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Build Your Dream Shed</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f9fafb;
-      color: #111;
-      line-height: 1.6;
-    }
-    header {
-      background: linear-gradient(135deg, #0f172a, #1e293b);
-      color: white;
-      padding: 80px 20px;
-      text-align: center;
-    }
-    header h1 {
-      font-size: 2.5rem;
-      margin-bottom: 15px;
-    }
-    header p {
-      font-size: 1.1rem;
-      max-width: 700px;
-      margin: auto;
-    }
-    .btn {
-      display: inline-block;
-      margin-top: 25px;
-      padding: 15px 30px;
-      background: #22c55e;
-      color: #fff;
-      font-size: 1rem;
-      text-decoration: none;
-      border-radius: 6px;
-      font-weight: bold;
-    }
-    section {
-      padding: 60px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-    h2 {
-      text-align: center;
-      margin-bottom: 30px;
-    }
-    ul {
-      max-width: 700px;
-      margin: auto;
-    }
-    .cta {
-      background: #0f172a;
-      color: white;
-      text-align: center;
-      padding: 60px 20px;
-    }
-    footer {
-      background: #020617;
-      color: #9ca3af;
-      text-align: center;
-      padding: 20px;
-      font-size: 0.9rem;
-    }
-    footer a {
-      color: #9ca3af;
-      margin: 0 10px;
-      text-decoration: none;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12,000+ Professional Shed Plans | Build Your Dream Shed Today</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #FF6B00; /* Safety Orange */
+            --primary-hover: #E66000;
+            --secondary: #1E293B; /* Slate Blue-Gray */
+            --dark: #0F172A;
+            --light: #F8FAFC;
+            --success: #22C55E;
+            --text-main: #334155;
+            --text-muted: #64748B;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; color: var(--text-main); line-height: 1.7; background-color: #fff; overflow-x: hidden; }
+        
+        .container { width: 90%; max-width: 1200px; margin: 0 auto; }
+        .section-padding { padding: 100px 0; }
+        .text-center { text-align: center; }
+
+        /* Typography */
+        h1, h2, h3 { font-family: 'Oswald', sans-serif; text-transform: uppercase; letter-spacing: -0.02em; line-height: 1.1; color: var(--dark); }
+        h1 { font-size: clamp(2.5rem, 5vw, 4.5rem); margin-bottom: 24px; }
+        h2 { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 20px; }
+        .gradient-text { background: linear-gradient(90deg, var(--primary), #FF9D00); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+
+        /* Buttons */
+        .cta-wrapper { margin: 40px 0; }
+        .btn {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 22px 50px;
+            font-size: 1.25rem;
+            font-weight: 800;
+            text-decoration: none;
+            border-radius: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 10px 25px rgba(255, 107, 0, 0.3);
+        }
+        .btn:hover { background: var(--primary-hover); transform: translateY(-3px); box-shadow: 0 15px 30px rgba(255, 107, 0, 0.4); }
+        .trust-line { margin-top: 15px; font-size: 0.95rem; font-weight: 600; color: var(--text-muted); display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+        .trust-line span { display: flex; align-items: center; gap: 6px; }
+        .trust-line span::before { content: '✓'; color: var(--success); font-weight: 900; }
+
+        /* Hero Section */
+        #hero { 
+            position: relative;
+            background: var(--dark);
+            color: white;
+            padding: 140px 0 100px;
+            text-align: center;
+            overflow: hidden;
+        }
+        #hero::before {
+            content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            background: url('https://images.unsplash.com/photo-1590059532624-65902346b05e?q=80&w=1600') center/cover;
+            opacity: 0.15; z-index: 0;
+        }
+        #hero .container { position: relative; z-index: 1; }
+        #hero p.subheadline { font-size: 1.4rem; max-width: 800px; margin: 0 auto 30px; color: #CBD5E1; font-weight: 400; }
+
+        /* Pain Points Section */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 50px; }
+        .card { background: white; padding: 40px; border-radius: 20px; border: 1px solid #E2E8F0; transition: 0.3s; }
+        .card:hover { border-color: var(--primary); transform: translateY(-5px); }
+        .pain-icon { font-size: 2.5rem; margin-bottom: 20px; display: block; }
+
+        /* Benefits */
+        .benefits-section { background: var(--light); }
+        .benefit-list { list-style: none; text-align: left; max-width: 600px; margin: 0 auto; }
+        .benefit-list li { 
+            padding: 15px 0; border-bottom: 1px solid #E2E8F0; 
+            display: flex; align-items: center; font-size: 1.1rem; font-weight: 600;
+        }
+        .benefit-list li::before { 
+            content: '→'; margin-right: 15px; color: var(--primary); font-weight: 900;
+        }
+
+        /* Guarantee Section */
+        .guarantee-box { 
+            background: var(--dark); color: white; border-radius: 30px; padding: 60px;
+            display: flex; align-items: center; gap: 50px; margin-top: 50px; position: relative; overflow: hidden;
+        }
+        .guarantee-content h2 { color: white; margin-bottom: 15px; }
+        .guarantee-badge { min-width: 150px; width: 150px; }
+
+        /* FAQ */
+        .faq-item { margin-bottom: 20px; text-align: left; max-width: 800px; margin-left: auto; margin-right: auto; border: 1px solid #E2E8F0; border-radius: 12px; padding: 25px; }
+        .faq-item h4 { font-size: 1.2rem; margin-bottom: 10px; color: var(--dark); display: flex; align-items: center; gap: 10px; }
+        .faq-item h4::before { content: 'Q:'; color: var(--primary); }
+
+        /* Footer */
+        footer { background: var(--dark); color: white; padding: 80px 0 40px; }
+        .footer-links { margin: 30px 0; }
+        .footer-links a { color: #94A3B8; text-decoration: none; margin: 0 15px; font-weight: 600; transition: 0.3s; }
+        .footer-links a:hover { color: var(--primary); }
+
+        @media (max-width: 768px) {
+            .guarantee-box { flex-direction: column; text-align: center; padding: 40px 20px; }
+            .btn { width: 100%; padding: 20px 10px; font-size: 1.1rem; }
+            h1 { font-size: 2.8rem; }
+        }
+    </style>
 </head>
 <body>
 
-<header>
-  <h1>Build Your Dream Shed Without Hiring Expensive Contractors</h1>
-  <p>Step-by-step shed plans designed for beginners to build strong, professional sheds while saving thousands.</p>
-  <a href="#" class="btn">Download Shed Plans Instantly</a>
-  <p style="margin-top:15px;">✅ Instant Access • ✅ Beginner Friendly • ✅ 60-Day Guarantee</p>
-</header>
+    <header id="hero">
+        <div class="container">
+            <span style="color: var(--primary); font-weight: 800; text-transform: uppercase; letter-spacing: 2px;">Woodworking Mastery</span>
+            <h1>Build Your Dream Shed Without Hiring <span class="gradient-text">Expensive Contractors</span></h1>
+            <p class="subheadline">Step-by-step shed plans that help beginners build strong, professional-looking sheds — saving thousands of dollars in labor costs.</p>
+            
+            <div class="cta-wrapper">
+                <a href="https://www.myshedplans.com/?hopId=8750dc9e-54f0-4aa2-841c-2c8a27dc2366" class="btn">Download 12,000+ Shed Plans Instantly</a>
+                <div class="trust-line">
+                    <span>Instant Access</span>
+                    <span>Beginner Friendly</span>
+                    <span>60-Day Money-Back Guarantee</span>
+                </div>
+            </div>
+        </div>
+    </header>
 
-<section>
-  <h2>Why Most People Struggle</h2>
-  <ul>
-    <li>Contractors charge $5,000+ for a simple shed</li>
-    <li>YouTube videos skip important steps</li>
-    <li>Wrong measurements waste money</li>
-    <li>No clear plan to follow</li>
-  </ul>
-</section>
+    <section class="section-padding">
+        <div class="container">
+            <div class="text-center">
+                <h2 style="color: var(--primary);">Tired of Overpaying?</h2>
+                <p style="font-size: 1.2rem; max-width: 700px; margin: 0 auto;">Don't let contractors charge you $5,000+ for a project you can finish in a weekend with the right guide.</p>
+            </div>
+            <div class="grid">
+                <div class="card">
+                    <span class="pain-icon">💸</span>
+                    <h3>High Labor Costs</h3>
+                    <p>Contractors often mark up materials and charge insane hourly rates for simple structures.</p>
+                </div>
+                <div class="card">
+                    <span class="pain-icon">😵‍💫</span>
+                    <h3>Confusing Guides</h3>
+                    <p>Free YouTube videos often skip critical steps, leaving you with a half-finished mess.</p>
+                </div>
+                <div class="card">
+                    <span class="pain-icon">📐</span>
+                    <h3>Wrong Measurements</h3>
+                    <p>Wasting $400 on the wrong lumber because your "plan" wasn't accurate or clear.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<section>
-  <h2>What You Get</h2>
-  <ul>
-    <li>Easy step-by-step instructions</li>
-    <li>Detailed blueprints & diagrams</li>
-    <li>Complete tools & materials list</li>
-    <li>Beginner-friendly guidance</li>
-    <li>Multiple shed designs</li>
-  </ul>
-</section>
+    <section class="section-padding benefits-section">
+        <div class="container">
+            <div class="text-center">
+                <h2>The Professional Solution</h2>
+                <p>Our shed plans give you surgical precision. No guesswork. No stress.</p>
+            </div>
+            <div class="grid" style="align-items: center;">
+                <div style="text-align: left;">
+                    <ul class="benefit-list">
+                        <li>Easy-to-follow step-by-step instructions</li>
+                        <li>Detailed blueprints & 3D diagrams</li>
+                        <li>Complete material & tools lists</li>
+                        <li>Designed for absolute beginners</li>
+                        <li>Saves thousands in wasted materials</li>
+                        <li>12,000+ Design options for every style</li>
+                    </ul>
+                </div>
+                <div>
+                    <img src="https://images.unsplash.com/photo-1589939705384-5185138a047a?auto=format&fit=crop&q=80&w=600" alt="Woodworking" style="width:100%; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.1);">
+                </div>
+            </div>
+        </div>
+    </section>
 
-<section>
-  <h2>60-Day Risk-Free Guarantee</h2>
-  <p style="text-align:center; max-width:700px; margin:auto;">
-    Try the shed plans for 60 days. If you’re not satisfied, request a refund — no questions asked.
-  </p>
-</section>
+    <section class="section-padding">
+        <div class="container">
+            <div class="guarantee-box">
+                <img src="https://cdn-icons-png.flaticon.com/512/9333/9333991.png" alt="Guarantee" class="guarantee-badge">
+                <div class="guarantee-content">
+                    <h2>60-Day Risk-Free Guarantee</h2>
+                    <p style="font-size: 1.1rem; opacity: 0.9;">Try the shed plans for a full 60 days. If you don't find them to be the easiest, most professional plans you've ever used, simply request a refund. <strong>No questions asked. No hoops to jump through.</strong></p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<div class="cta">
-  <h2>Ready to Build Your Shed?</h2>
-  <p>Get instant access and start building today.</p>
-  <a href="#" class="btn">Get Instant Access Now</a>
-</div>
+    <section class="section-padding">
+        <div class="container text-center">
+            <h2>Frequently Asked Questions</h2>
+            <div style="margin-top: 50px;">
+                <div class="faq-item">
+                    <h4>Do I need prior experience?</h4>
+                    <p>Absolutely not. These plans are crafted specifically for beginners. We walk you through every single nail and cut.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Are tool lists included?</h4>
+                    <p>Yes. You get a complete list of tools and materials for every project so you can shop in one trip.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Is this a digital product?</h4>
+                    <p>Yes. You will receive instant digital access immediately after purchase so you can start today.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<footer>
-  <p>© 2026 Happy Planeta. All Rights Reserved.</p>
-  <a href="privacy.html">Privacy Policy</a> |
-  <a href="terms.html">Terms & Conditions</a> |
-  <a href="contact.html">Contact</a>
-</footer>
+    <section class="section-padding text-center" style="background: var(--light);">
+        <div class="container">
+            <h2>Start Your Project Today</h2>
+            <p style="margin-bottom: 30px;">Join 30,000+ DIYers who built their own sheds the smart way.</p>
+            <a href="https://www.myshedplans.com/?hopId=8750dc9e-54f0-4aa2-841c-2c8a27dc2366" class="btn">Get Instant Access Now</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container text-center">
+            <h3>Happy Planeta</h3>
+            <div class="footer-links">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms & Conditions</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+            <p style="color: #64748B; font-size: 0.8rem;">&copy; 2026 Happy Planeta. All rights reserved. <br> 
+            ClickBank is the retailer of products on this site. CLICKBANK® is a registered trademark of Click Sales, Inc.</p>
+        </div>
+    </footer>
 
 </body>
 </html>
