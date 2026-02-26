@@ -5,65 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>12,000+ Shed Plans | The Professional DIY Building System</title>
     
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
     
     <style>
         :root {
             --primary: #FF6B00; 
-            --primary-hover: #E66000;
             --navy: #0F172A;
-            --slate-light: #F8FAFC;
-            --slate-text: #334155;
             --white: #FFFFFF;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', sans-serif; color: var(--slate-text); line-height: 1.6; background-color: var(--white); }
-        h1, h2, h3 { font-family: 'Oswald', sans-serif; text-transform: uppercase; color: var(--navy); }
-        .container { width: 92%; max-width: 1100px; margin: 0 auto; }
-        .text-center { text-align: center; }
+        body { font-family: 'Inter', sans-serif; color: #334155; line-height: 1.6; }
 
-        /* 🖼️ THE PREMIUM HERO SECTION */
+        /* 🖼️ THE NEW PREMIUM HERO SECTION */
         #hero { 
             position: relative;
-            min-height: 85vh; /* Larger presence */
+            min-height: 85vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            /* ASPIRATIONAL IMAGE: High-res, golden-hour backyard shed */
-            background: linear-gradient(rgba(15, 23, 42, 0.65), rgba(15, 23, 42, 0.65)), 
+            /* Using a high-res aspirational backyard shed image */
+            background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7)), 
                         url('https://images.unsplash.com/photo-1590132840911-807753697801?q=80&w=2070&auto=format&fit=crop') center/cover no-repeat;
             color: var(--white);
-            padding: 80px 20px;
             text-align: center;
+            padding: 20px;
         }
 
-        .hero-content { position: relative; z-index: 10; max-width: 850px; }
+        .hero-content { max-width: 850px; z-index: 10; }
         
-        #hero h1 { 
+        h1 { 
+            font-family: 'Oswald', sans-serif;
             font-size: clamp(2.5rem, 6vw, 4.2rem); 
-            color: var(--white); 
+            text-transform: uppercase;
             margin-bottom: 20px; 
-            text-shadow: 0 4px 15px rgba(0,0,0,0.4);
-            letter-spacing: -1px;
+            line-height: 1.1;
+            text-shadow: 0 4px 15px rgba(0,0,0,0.5);
         }
 
-        .hero-sub { 
-            font-size: clamp(1.2rem, 2.5vw, 1.5rem); 
-            color: #F1F5F9; 
+        .sub-headline { 
+            font-size: clamp(1.1rem, 2vw, 1.4rem); 
             margin-bottom: 40px; 
-            font-weight: 400;
-            line-height: 1.4;
+            color: #F1F5F9;
         }
 
         /* 🧠 THE CREDIBILITY LINE */
         .credibility-line {
-            margin-top: 35px;
+            margin-top: 30px;
             font-size: 0.95rem;
             color: #CBD5E1;
-            letter-spacing: 0.5px;
             font-weight: 500;
-            opacity: 0.9;
+            letter-spacing: 0.5px;
         }
 
         /* 🎨 CTA BUTTON */
@@ -71,31 +63,25 @@
             display: inline-block;
             background: var(--primary);
             color: var(--white);
-            padding: 22px 55px;
+            padding: 22px 50px;
             font-size: 1.5rem;
             font-weight: 800;
             text-decoration: none;
             border-radius: 8px;
             text-transform: uppercase;
-            box-shadow: 0 10px 25px rgba(255, 107, 0, 0.4);
-            transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            border: none;
+            box-shadow: 0 10px 30px rgba(255, 107, 0, 0.4);
+            transition: 0.3s;
         }
 
         .cta-button:hover { 
-            background: var(--primary-hover); 
-            transform: translateY(-3px); 
-            box-shadow: 0 15px 35px rgba(255, 107, 0, 0.5); 
+            background: #E66000; 
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(255, 107, 0, 0.6);
         }
 
-        /* 🛠️ UX REFINEMENT: SPACING & ICONS */
-        .benefit-section { padding: 80px 0; background: #fff; }
-        .benefit-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
-        .benefit-item { display: flex; align-items: flex-start; gap: 15px; }
-        .check-icon { color: var(--primary); font-size: 1.5rem; font-weight: bold; }
-
+        /* 📱 MOBILE FIXES */
         @media (max-width: 768px) {
-            #hero { min-height: 70vh; padding: 100px 20px; }
+            #hero { min-height: 70vh; }
             .cta-button { width: 100%; padding: 20px 10px; font-size: 1.2rem; }
         }
     </style>
@@ -104,9 +90,9 @@
 
     <header id="hero">
         <div class="hero-content">
-            <p style="text-transform: uppercase; letter-spacing: 4px; font-weight: 700; color: var(--primary); margin-bottom: 10px; font-size: 0.9rem;">The Master Woodworker's Collection</p>
-            <h1>Build a Stunning Shed <br><span style="color: var(--white);">This Weekend.</span></h1>
-            <p class="hero-sub">Access 12,000+ LEGO-style shed plans that guide you through every cut and joint. No guesswork. No wasted lumber.</p>
+            <p style="text-transform: uppercase; letter-spacing: 3px; font-weight: 700; color: var(--primary); margin-bottom: 15px;">The Professional DIY System</p>
+            <h1>Build Your Perfect Shed <br>In One Weekend</h1>
+            <p class="sub-headline">Get instant access to 12,000+ architect-grade shed plans with step-by-step 3D diagrams that make building easy—even for complete beginners.</p>
             
             <a href="https://ryanshedplan.com/main/?affiliate=XXXXX" class="cta-button">Access All 12,000 Plans Now →</a>
             
@@ -114,58 +100,5 @@
         </div>
     </header>
 
-    <section class="benefit-section">
-        <div class="container benefit-grid">
-            <div class="benefit-item">
-                <span class="check-icon">✓</span>
-                <div>
-                    <h3 style="margin-bottom: 5px;">3D Exploded Views</h3>
-                    <p>Visual blueprints that show exactly how every piece of wood fits together.</p>
-                </div>
-            </div>
-            <div class="benefit-item">
-                <span class="check-icon">✓</span>
-                <div>
-                    <h3 style="margin-bottom: 5px;">Exact Material Lists</h3>
-                    <p>Stop overpaying at the hardware store. Buy only what you need to build.</p>
-                </div>
-            </div>
-            <div class="benefit-item">
-                <span class="check-icon">✓</span>
-                <div>
-                    <h3 style="margin-bottom: 5px;">Beginner Friendly</h3>
-                    <p>Designed for DIYers with zero construction experience or expensive tools.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section style="background: var(--slate-light); padding: 80px 0;">
-        <div class="container text-center">
-            <h2 style="margin-bottom: 50px;">Real Success Stories</h2>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
-                <div style="background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); text-align: left; border-top: 4px solid var(--primary);">
-                    <p style="font-style: italic; margin-bottom: 20px;">"I've never built anything in my life. These plans were so clear I finished my frame in one Saturday. My neighbors think I hired a pro!"</p>
-                    <b>— David R., Florida</b>
-                </div>
-                <div style="background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); text-align: left; border-top: 4px solid var(--primary);">
-                    <p style="font-style: italic; margin-bottom: 20px;">"The materials list saved me $240 in lumber. I knew exactly what to buy and didn't have to make any second trips to Home Depot."</p>
-                    <b>— Mike T., Ohio</b>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer style="background: var(--navy); color: #94A3B8; padding: 60px 0; text-align: center;">
-        <div class="container">
-            <h3 style="color: white; margin-bottom: 20px;">HAPPY PLANETA</h3>
-            <div style="margin-bottom: 30px;">
-                <a href="privacy.html" style="color: white; text-decoration: none; margin: 0 15px;">Privacy Policy</a>
-                <a href="terms.html" style="color: white; text-decoration: none; margin: 0 15px;">Terms & Conditions</a>
-            </div>
-            <p style="font-size: 0.8rem; opacity: 0.5;">&copy; 2026 Happy Planeta. ClickBank is the retailer of this product.</p>
-        </div>
-    </footer>
-
-</body>
+    </body>
 </html>
