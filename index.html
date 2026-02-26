@@ -7,107 +7,72 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #FF6B00; /* Safety Orange */
+            --primary-brand: #FF6B00; /* Safety Orange - construction focused */
             --primary-hover: #E66000;
-            --secondary: #1E293B; /* Slate Blue-Gray */
+            --secondary: #1E293B; 
             --dark: #0F172A;
             --light: #F8FAFC;
             --success: #22C55E;
             --text-main: #334155;
-            --text-muted: #64748B;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', sans-serif; color: var(--text-main); line-height: 1.7; background-color: #fff; overflow-x: hidden; }
-        
+        body { font-family: 'Inter', sans-serif; color: var(--text-main); line-height: 1.7; background-color: #fff; }
         .container { width: 90%; max-width: 1200px; margin: 0 auto; }
-        .section-padding { padding: 100px 0; }
+        .section-padding { padding: 80px 0; }
         .text-center { text-align: center; }
 
         /* Typography */
         h1, h2, h3 { font-family: 'Oswald', sans-serif; text-transform: uppercase; letter-spacing: -0.02em; line-height: 1.1; color: var(--dark); }
-        h1 { font-size: clamp(2.5rem, 5vw, 4.5rem); margin-bottom: 24px; }
-        h2 { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 20px; }
-        .gradient-text { background: linear-gradient(90deg, var(--primary), #FF9D00); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        h1 { font-size: clamp(2.2rem, 5vw, 4rem); margin-bottom: 24px; }
+        h2 { font-size: clamp(1.8rem, 4vw, 2.8rem); margin-bottom: 20px; }
 
-        /* Buttons */
-        .cta-wrapper { margin: 40px 0; }
-        .btn {
+        /* Button Pulse Animation */
+        @keyframes pulse {
+            0% { transform: scale(1); box-shadow: 0 10px 25px rgba(255, 107, 0, 0.3); }
+            50% { transform: scale(1.03); box-shadow: 0 15px 35px rgba(255, 107, 0, 0.5); }
+            100% { transform: scale(1); box-shadow: 0 10px 25px rgba(255, 107, 0, 0.3); }
+        }
+
+        .cta-button {
             display: inline-block;
-            background: var(--primary);
+            background: var(--primary-brand);
             color: white;
             padding: 22px 50px;
-            font-size: 1.25rem;
+            font-size: 1.4rem;
             font-weight: 800;
             text-decoration: none;
             border-radius: 12px;
             text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            box-shadow: 0 10px 25px rgba(255, 107, 0, 0.3);
+            animation: pulse 2.5s infinite ease-in-out;
+            transition: 0.3s;
         }
-        .btn:hover { background: var(--primary-hover); transform: translateY(-3px); box-shadow: 0 15px 30px rgba(255, 107, 0, 0.4); }
-        .trust-line { margin-top: 15px; font-size: 0.95rem; font-weight: 600; color: var(--text-muted); display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
-        .trust-line span { display: flex; align-items: center; gap: 6px; }
-        .trust-line span::before { content: '✓'; color: var(--success); font-weight: 900; }
+        .cta-button:hover { background: var(--primary-hover); transform: translateY(-3px); }
 
-        /* Hero Section */
+        /* Sections */
         #hero { 
-            position: relative;
-            background: var(--dark);
-            color: white;
-            padding: 140px 0 100px;
-            text-align: center;
-            overflow: hidden;
+            background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)), url('https://images.unsplash.com/photo-1590059532624-65902346b05e?q=80&w=1600') center/cover;
+            color: white; padding: 120px 0 80px; text-align: center;
         }
-        #hero::before {
-            content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-            background: url('https://images.unsplash.com/photo-1590059532624-65902346b05e?q=80&w=1600') center/cover;
-            opacity: 0.15; z-index: 0;
-        }
-        #hero .container { position: relative; z-index: 1; }
-        #hero p.subheadline { font-size: 1.4rem; max-width: 800px; margin: 0 auto 30px; color: #CBD5E1; font-weight: 400; }
+        #hero h1 { color: white; }
+        .highlight { color: var(--primary-brand); }
+        .trust-line { margin-top: 20px; font-weight: 600; color: #CBD5E1; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
+        
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
+        .card { background: var(--light); padding: 40px; border-radius: 20px; border: 1px solid #E2E8F0; }
 
-        /* Pain Points Section */
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 50px; }
-        .card { background: white; padding: 40px; border-radius: 20px; border: 1px solid #E2E8F0; transition: 0.3s; }
-        .card:hover { border-color: var(--primary); transform: translateY(-5px); }
-        .pain-icon { font-size: 2.5rem; margin-bottom: 20px; display: block; }
-
-        /* Benefits */
-        .benefits-section { background: var(--light); }
-        .benefit-list { list-style: none; text-align: left; max-width: 600px; margin: 0 auto; }
-        .benefit-list li { 
-            padding: 15px 0; border-bottom: 1px solid #E2E8F0; 
-            display: flex; align-items: center; font-size: 1.1rem; font-weight: 600;
-        }
-        .benefit-list li::before { 
-            content: '→'; margin-right: 15px; color: var(--primary); font-weight: 900;
-        }
-
-        /* Guarantee Section */
         .guarantee-box { 
-            background: var(--dark); color: white; border-radius: 30px; padding: 60px;
-            display: flex; align-items: center; gap: 50px; margin-top: 50px; position: relative; overflow: hidden;
+            background: var(--dark); color: white; border-radius: 24px; padding: 50px;
+            display: flex; align-items: center; gap: 40px; margin-top: 40px;
         }
-        .guarantee-content h2 { color: white; margin-bottom: 15px; }
-        .guarantee-badge { min-width: 150px; width: 150px; }
 
-        /* FAQ */
-        .faq-item { margin-bottom: 20px; text-align: left; max-width: 800px; margin-left: auto; margin-right: auto; border: 1px solid #E2E8F0; border-radius: 12px; padding: 25px; }
-        .faq-item h4 { font-size: 1.2rem; margin-bottom: 10px; color: var(--dark); display: flex; align-items: center; gap: 10px; }
-        .faq-item h4::before { content: 'Q:'; color: var(--primary); }
-
-        /* Footer */
-        footer { background: var(--dark); color: white; padding: 80px 0 40px; }
-        .footer-links { margin: 30px 0; }
-        .footer-links a { color: #94A3B8; text-decoration: none; margin: 0 15px; font-weight: 600; transition: 0.3s; }
-        .footer-links a:hover { color: var(--primary); }
+        footer { background: var(--dark); color: #94A3B8; padding: 60px 0; text-align: center; }
+        footer a { color: #94A3B8; text-decoration: none; margin: 0 10px; font-weight: 600; }
+        footer a:hover { color: var(--primary-brand); }
 
         @media (max-width: 768px) {
-            .guarantee-box { flex-direction: column; text-align: center; padding: 40px 20px; }
-            .btn { width: 100%; padding: 20px 10px; font-size: 1.1rem; }
-            h1 { font-size: 2.8rem; }
+            .guarantee-box { flex-direction: column; text-align: center; }
+            .cta-button { width: 100%; font-size: 1.1rem; }
         }
     </style>
 </head>
@@ -115,121 +80,64 @@
 
     <header id="hero">
         <div class="container">
-            <span style="color: var(--primary); font-weight: 800; text-transform: uppercase; letter-spacing: 2px;">Woodworking Mastery</span>
-            <h1>Build Your Dream Shed Without Hiring <span class="gradient-text">Expensive Contractors</span></h1>
-            <p class="subheadline">Step-by-step shed plans that help beginners build strong, professional-looking sheds — saving thousands of dollars in labor costs.</p>
-            
-            <div class="cta-wrapper">
-                <a href="https://www.myshedplans.com/?hopId=8750dc9e-54f0-4aa2-841c-2c8a27dc2366" class="btn">Download 12,000+ Shed Plans Instantly</a>
-                <div class="trust-line">
-                    <span>Instant Access</span>
-                    <span>Beginner Friendly</span>
-                    <span>60-Day Money-Back Guarantee</span>
-                </div>
+            <p style="text-transform: uppercase; letter-spacing: 2px; font-weight: 800; color: var(--primary-brand); margin-bottom: 10px;">The Ultimate Woodworking Resource</p>
+            <h1>Stop Overpaying Contractors: Build Your Own <span class="highlight">Professional Shed</span> This Weekend</h1>
+            <p style="font-size: 1.3rem; max-width: 800px; margin: 0 auto 30px; color: #E2E8F0;">Access 12,000+ step-by-step blueprints designed for beginners. No guesswork, no wasted lumber, and no expensive labor fees.</p>
+            <a href="https://www.myshedplans.com/?hopId=8750dc9e-54f0-4aa2-841c-2c8a27dc2366" class="cta-button">Download My Shed Plans Now</a>
+            <div class="trust-line">
+                <span>✓ Instant Digital Access</span>
+                <span>✓ One-Time Payment</span>
+                <span>✓ 60-Day Guarantee</span>
             </div>
         </div>
     </header>
 
-    <section class="section-padding">
-        <div class="container">
-            <div class="text-center">
-                <h2 style="color: var(--primary);">Tired of Overpaying?</h2>
-                <p style="font-size: 1.2rem; max-width: 700px; margin: 0 auto;">Don't let contractors charge you $5,000+ for a project you can finish in a weekend with the right guide.</p>
+    <section class="section-padding container">
+        <div class="text-center">
+            <h2>Why Waste $5,000 On A Contractor?</h2>
+            <p>Store-bought sheds are flimsy. Contractors charge a fortune. These plans act like a master carpenter standing over your shoulder.</p>
+        </div>
+        <div class="grid">
+            <div class="card">
+                <h3>Save $1,000s on Labor</h3>
+                <p>Do it yourself with pro results, even if you’ve never held a hammer or built a single thing.</p>
             </div>
-            <div class="grid">
-                <div class="card">
-                    <span class="pain-icon">💸</span>
-                    <h3>High Labor Costs</h3>
-                    <p>Contractors often mark up materials and charge insane hourly rates for simple structures.</p>
-                </div>
-                <div class="card">
-                    <span class="pain-icon">😵‍💫</span>
-                    <h3>Confusing Guides</h3>
-                    <p>Free YouTube videos often skip critical steps, leaving you with a half-finished mess.</p>
-                </div>
-                <div class="card">
-                    <span class="pain-icon">📐</span>
-                    <h3>Wrong Measurements</h3>
-                    <p>Wasting $400 on the wrong lumber because your "plan" wasn't accurate or clear.</p>
-                </div>
+            <div class="card">
+                <h3>Zero Wasted Materials</h3>
+                <p>Our exact shopping lists mean you buy only what you need—saving you hundreds at the hardware store.</p>
+            </div>
+            <div class="card">
+                <h3>Build in Record Time</h3>
+                <p>Clear 3D diagrams eliminate the "confusion breaks" that stall most DIY projects for weeks.</p>
             </div>
         </div>
     </section>
 
-    <section class="section-padding benefits-section">
-        <div class="container">
-            <div class="text-center">
-                <h2>The Professional Solution</h2>
-                <p>Our shed plans give you surgical precision. No guesswork. No stress.</p>
-            </div>
-            <div class="grid" style="align-items: center;">
-                <div style="text-align: left;">
-                    <ul class="benefit-list">
-                        <li>Easy-to-follow step-by-step instructions</li>
-                        <li>Detailed blueprints & 3D diagrams</li>
-                        <li>Complete material & tools lists</li>
-                        <li>Designed for absolute beginners</li>
-                        <li>Saves thousands in wasted materials</li>
-                        <li>12,000+ Design options for every style</li>
-                    </ul>
-                </div>
-                <div>
-                    <img src="https://images.unsplash.com/photo-1589939705384-5185138a047a?auto=format&fit=crop&q=80&w=600" alt="Woodworking" style="width:100%; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.1);">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="section-padding">
+    <section class="section-padding" style="background: var(--light);">
         <div class="container">
             <div class="guarantee-box">
-                <img src="https://cdn-icons-png.flaticon.com/512/9333/9333991.png" alt="Guarantee" class="guarantee-badge">
-                <div class="guarantee-content">
-                    <h2>60-Day Risk-Free Guarantee</h2>
-                    <p style="font-size: 1.1rem; opacity: 0.9;">Try the shed plans for a full 60 days. If you don't find them to be the easiest, most professional plans you've ever used, simply request a refund. <strong>No questions asked. No hoops to jump through.</strong></p>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Seal_of_Satisfaction_Guaranteed.svg/150px-Seal_of_Satisfaction_Guaranteed.svg.png" alt="Guarantee" width="120">
+                <div>
+                    <h2>100% Risk-Free 60-Day Guarantee</h2>
+                    <p>Try the shed plans for a full 60 days. If you don't find them to be the easiest, most professional plans you've ever used, get a full refund. No questions asked.</p>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <section class="section-padding">
-        <div class="container text-center">
-            <h2>Frequently Asked Questions</h2>
-            <div style="margin-top: 50px;">
-                <div class="faq-item">
-                    <h4>Do I need prior experience?</h4>
-                    <p>Absolutely not. These plans are crafted specifically for beginners. We walk you through every single nail and cut.</p>
-                </div>
-                <div class="faq-item">
-                    <h4>Are tool lists included?</h4>
-                    <p>Yes. You get a complete list of tools and materials for every project so you can shop in one trip.</p>
-                </div>
-                <div class="faq-item">
-                    <h4>Is this a digital product?</h4>
-                    <p>Yes. You will receive instant digital access immediately after purchase so you can start today.</p>
-                </div>
+            <div class="text-center" style="margin-top: 50px;">
+                <a href="https://www.myshedplans.com/?hopId=8750dc9e-54f0-4aa2-841c-2c8a27dc2366" class="cta-button">Access 12,000 Plans Today</a>
             </div>
-        </div>
-    </section>
-
-    <section class="section-padding text-center" style="background: var(--light);">
-        <div class="container">
-            <h2>Start Your Project Today</h2>
-            <p style="margin-bottom: 30px;">Join 30,000+ DIYers who built their own sheds the smart way.</p>
-            <a href="https://www.myshedplans.com/?hopId=8750dc9e-54f0-4aa2-841c-2c8a27dc2366" class="btn">Get Instant Access Now</a>
         </div>
     </section>
 
     <footer>
-        <div class="container text-center">
+        <div class="container">
             <h3>Happy Planeta</h3>
-            <div class="footer-links">
-                <a href="privacy.html">Privacy Policy</a>
-                <a href="terms.html">Terms & Conditions</a>
+            <div style="margin: 20px 0;">
+                <a href="privacy.html">Privacy Policy</a> | 
+                <a href="terms.html">Terms & Conditions</a> | 
                 <a href="contact.html">Contact Us</a>
             </div>
-            <p style="color: #64748B; font-size: 0.8rem;">&copy; 2026 Happy Planeta. All rights reserved. <br> 
-            ClickBank is the retailer of products on this site. CLICKBANK® is a registered trademark of Click Sales, Inc.</p>
+            <p style="font-size: 0.8rem; opacity: 0.6;">&copy; 2026 Happy Planeta. Not affiliated with Facebook, Inc. <br>
+            ClickBank is the retailer of products on this site.</p>
         </div>
     </footer>
 
