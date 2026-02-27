@@ -22,63 +22,64 @@ body { font-family: 'Inter', sans-serif; color: var(--slate); line-height: 1.6; 
 /* HERO */
 #hero { 
     position: relative;
-    height: 90vh;
-    min-height: 600px;
+    height: 85vh;
+    min-height: 550px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(rgba(15, 23, 42, 0.55), rgba(15, 23, 42, 0.55)), 
+    background: linear-gradient(rgba(15, 23, 42, 0.6), rgba(15, 23, 42, 0.6)), 
                 url('https://i.postimg.cc/qqFmjPVG/cara-fast-a-Can-u-create-a-beaut.jpg') center/cover no-repeat fixed;
     color: var(--white);
     text-align: center;
     padding: 20px;
 }
 .hero-container { max-width: 900px; z-index: 5; }
-.hero-tag { text-transform: uppercase; letter-spacing: 4px; font-weight: 700; color: var(--primary); margin-bottom: 20px; display: block; font-size: 0.9rem; }
-#hero h1 { font-family: 'Oswald', sans-serif; font-size: clamp(2.5rem, 8vw, 4.5rem); line-height: 1.1; margin-bottom: 25px; text-transform: uppercase; }
-.hero-sub { font-size: clamp(1.1rem, 2.5vw, 1.3rem); margin-bottom: 40px; color: #E2E8F0; max-width: 700px; margin: 0 auto 40px; font-weight: 300; }
+.hero-tag { text-transform: uppercase; letter-spacing: 4px; font-weight: 700; color: var(--primary); margin-bottom: 20px; display: block; font-size: 0.85rem; }
+#hero h1 { font-family: 'Oswald', sans-serif; font-size: clamp(2.2rem, 7vw, 4.5rem); line-height: 1.1; margin-bottom: 20px; text-transform: uppercase; }
+.hero-sub { font-size: clamp(1rem, 2.2vw, 1.25rem); margin-bottom: 35px; color: #E2E8F0; max-width: 750px; margin: 0 auto 35px; font-weight: 300; }
+
 .cta-button {
     display: inline-block;
     background: var(--primary);
     color: var(--white);
-    padding: 22px 50px;
-    font-size: 1.3rem;
+    padding: 20px 45px;
+    font-size: 1.2rem;
     font-weight: 800;
     text-decoration: none;
     border-radius: 4px;
     text-transform: uppercase;
-    transition: all 0.3s ease;
-    box-shadow: 0 10px 30px rgba(255, 107, 0, 0.3);
+    transition: 0.3s ease;
+    box-shadow: 0 10px 25px rgba(255, 107, 0, 0.2);
 }
-.cta-button:hover { transform: translateY(-3px); background: var(--primary-hover); }
-
-/* COMPLIANCE TEXT */
-.disclosure { font-size: 0.75rem; color: #94A3B8; margin-top: 20px; max-width: 600px; margin-left: auto; margin-right: auto; line-height: 1.4; }
+.cta-button:hover { transform: translateY(-2px); background: var(--primary-hover); }
 
 /* SECTIONS */
-.section { padding: 100px 0; }
-.container { width: 90%; max-width: 1200px; margin: 0 auto; }
-.flex-grid { display: flex; align-items: center; gap: 60px; flex-wrap: wrap; }
-.flex-half { flex: 1; min-width: 320px; }
-.product-img { width: 100%; border-radius: 8px; }
-.section-title { font-family: 'Oswald', sans-serif; font-size: 3rem; margin-bottom: 30px; text-transform: uppercase; }
+.section { padding: 80px 0; }
+.container { width: 92%; max-width: 1100px; margin: 0 auto; }
+.flex-grid { display: flex; align-items: center; gap: 50px; flex-wrap: wrap; }
+.flex-half { flex: 1; min-width: 300px; }
+.product-img { width: 100%; border-radius: 10px; box-shadow: 0 15px 35px rgba(0,0,0,0.1); }
+.section-title { font-family: 'Oswald', sans-serif; font-size: 2.8rem; margin-bottom: 25px; text-transform: uppercase; }
 .section-title span { color: var(--primary); }
 
-/* FEATURES */
-.features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 50px; }
-.feature-card { background: var(--white); border-radius: 12px; overflow: hidden; box-shadow: 0 10px 20px rgba(0,0,0,0.05); text-align: center; border: 1px solid #edf2f7; }
-.feature-img { width: 100%; height: 220px; object-fit: cover; }
-.feature-info { padding: 30px; }
+/* FEATURES GRID (CONSISTENT ASPECT RATIO) */
+.features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; margin-top: 40px; }
+.feature-card { background: var(--white); border-radius: 12px; overflow: hidden; box-shadow: 0 10px 20px rgba(0,0,0,0.04); border: 1px solid #f1f5f9; text-align: center; }
+.feature-img { width: 100%; height: 200px; object-fit: cover; }
+.feature-info { padding: 25px; }
+.feature-info h3 { font-family: 'Oswald'; font-size: 1.4rem; margin-bottom: 8px; color: var(--navy); }
+.feature-info p { font-size: 0.95rem; color: #64748b; }
 
-/* TESTIMONIALS */
-.testimonials { background: var(--light-bg); }
-.testimonial-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-.t-card { background: var(--white); padding: 40px; border-radius: 12px; text-align: center; }
-.t-img { width: 80px; height: 80px; border-radius: 50%; object-fit: cover; margin-bottom: 20px; border: 3px solid var(--primary); }
+/* SUPPORT SECTION */
+.support-section { background: var(--light-bg); border-top: 1px solid #e2e8f0; text-align: center; }
+.support-box { max-width: 600px; margin: 0 auto; padding: 30px; background: white; border-radius: 10px; border: 1px solid #e2e8f0; }
 
-/* MOBILE */
+/* FOOTER & DISCLOSURE */
+footer { padding: 60px 0; text-align: center; background: #0F172A; color: #94A3B8; font-size: 0.85rem; }
+.affiliate-note { font-size: 0.75rem; color: #64748b; margin-top: 15px; max-width: 700px; margin-left: auto; margin-right: auto; line-height: 1.5; }
+
 @media (max-width: 768px) {
-    .section { padding: 60px 0; }
+    .section { padding: 50px 0; }
     .section-title { font-size: 2.2rem; }
 }
 </style>
@@ -87,12 +88,11 @@ body { font-family: 'Inter', sans-serif; color: var(--slate); line-height: 1.6; 
 
 <header id="hero">
     <div class="hero-container">
-        <span class="hero-tag">Step-By-Step Woodworking Collection</span>
-        <h1>Build Your Custom Shed <br><span style="color: var(--primary);">With Ease & Precision</span></h1>
-        <p class="hero-sub">Access over 12,000 beginner-friendly shed plans featuring clear instructions and comprehensive material lists to help reduce waste.</p>
-        <a href="https://ryanshedplan.com/main/?affiliate=XXXXX" class="cta-button">View The Plans</a>
-        
-        <p class="disclosure">Ad Disclosure: This page contains affiliate links. We may earn a small commission at no extra cost to you if you choose to make a purchase.</p>
+        <span class="hero-tag">Complete Woodworking Blueprint Collection</span>
+        <h1>Build Your Custom Shed <br><span style="color: var(--primary);">With Professional Clarity</span></h1>
+        <p class="hero-sub">Explore over 12,000 detailed shed plans designed to help DIY builders reduce material waste and streamline the construction process.</p>
+        <a href="https://ryanshedplan.com/main/?affiliate=XXXXX" class="cta-button">Access The Blueprints</a>
+        <p class="affiliate-note" style="color: #cbd5e1;">Ad Disclosure: This site contains affiliate links. We may earn a commission on qualifying purchases.</p>
     </div>
 </header>
 
@@ -100,15 +100,15 @@ body { font-family: 'Inter', sans-serif; color: var(--slate); line-height: 1.6; 
     <div class="container">
         <div class="flex-grid">
             <div class="flex-half">
-                <img src="https://d2hxwhv2sc3sef.cloudfront.net/go/wp-content/uploads/2023/05/rs1box-transparent.png" loading="lazy" class="product-img" alt="Shed Plans Library">
+                <img src="https://d2hxwhv2sc3sef.cloudfront.net/go/wp-content/uploads/2023/05/rs1box-transparent.png" loading="lazy" class="product-img" alt="Ryan Shed Plans Package">
             </div>
             <div class="flex-half">
-                <h2 class="section-title">The Complete <span>Builder's Guide</span></h2>
-                <p style="font-size: 1.1rem; margin-bottom: 30px;">Designed to help DIYers save time and avoid common construction mistakes with high-accuracy blueprints.</p>
+                <h2 class="section-title">Precision-Engineered <span>For Success</span></h2>
+                <p style="margin-bottom: 25px;">Avoid the guesswork of free, incomplete sketches. These plans are structured to guide you through every cut and joint with confidence.</p>
                 <ul style="list-style: none;">
-                    <li style="margin-bottom: 15px;">✅ <b>3D Visuals:</b> Clear diagrams to help you see every detail.</li>
-                    <li style="margin-bottom: 15px;">✅ <b>Material Checklists:</b> Know exactly what is required for your build.</li>
-                    <li style="margin-bottom: 15px;">✅ <b>Step-By-Step Format:</b> Structured plans suitable for any skill level.</li>
+                    <li style="margin-bottom: 12px;">✅ <b>3D Exploded Views:</b> See exactly how parts fit together.</li>
+                    <li style="margin-bottom: 12px;">✅ <b>Comprehensive Material Lists:</b> Purchase only what you need.</li>
+                    <li style="margin-bottom: 12px;">✅ <b>Verified Dimensions:</b> Blueprints designed for structural integrity.</li>
                 </ul>
             </div>
         </div>
@@ -117,76 +117,62 @@ body { font-family: 'Inter', sans-serif; color: var(--slate); line-height: 1.6; 
 
 <section class="section" style="background-color: var(--navy); color: white;">
     <div class="container">
-        <h2 class="section-title" style="color: white; text-align: center;">Styles For <span>Every Backyard</span></h2>
+        <h2 class="section-title" style="color: white; text-align: center;">Styles For <span>Every Need</span></h2>
         <div class="features-grid">
             <div class="feature-card">
                 <img src="https://i.postimg.cc/h4d9HQBG/rsm-garage1.jpg" loading="lazy" class="feature-img" alt="Storage Shed">
-                <div class="feature-info" style="color: var(--slate);">
+                <div class="feature-info">
                     <h3>Storage Sheds</h3>
-                    <p>Functional designs for equipment and tool organization.</p>
+                    <p>Durable designs optimized for tool and equipment organization.</p>
                 </div>
             </div>
             <div class="feature-card">
                 <img src="https://i.postimg.cc/HW6g1n9j/large-shed52.png" loading="lazy" class="feature-img" alt="Garden Shed">
-                <div class="feature-info" style="color: var(--slate);">
+                <div class="feature-info">
                     <h3>Garden Sheds</h3>
-                    <p>Classic aesthetic styles for your backyard garden space.</p>
+                    <p>Classic aesthetic structures perfect for any backyard garden.</p>
                 </div>
             </div>
             <div class="feature-card">
                 <img src="https://d2hxwhv2sc3sef.cloudfront.net/go/wp-content/uploads/2024/08/lean-to5135.jpg" loading="lazy" class="feature-img" alt="Modern Lean-To">
-                <div class="feature-info" style="color: var(--slate);">
+                <div class="feature-info">
                     <h3>Modern Lean-To</h3>
-                    <p>Space-efficient designs ideal for smaller properties.</p>
+                    <p>Space-saving solutions designed for side-yards and tight spaces.</p>
                 </div>
             </div>
             <div class="feature-card">
                 <img src="https://www.myshedplans.com/images/sheds/tool-shed-plans.jpg" loading="lazy" class="feature-img" alt="Workshop">
-                <div class="feature-info" style="color: var(--slate);">
-                    <h3>Workshops</h3>
-                    <p>Sturdy blueprints for hobbyists and project spaces.</p>
+                <div class="feature-info">
+                    <h3>Hobby Workshops</h3>
+                    <p>Heavy-duty blueprints for power tools and large-scale projects.</p>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<section class="section testimonials">
+<section class="section support-section">
     <div class="container">
-        <h2 class="section-title" style="text-align: center;">Feedback From <span>Our Community</span></h2>
-        <div class="testimonial-grid">
-            <div class="t-card">
-                <img src="https://randomuser.me/api/portraits/men/32.jpg" loading="lazy" class="t-img" alt="David R.">
-                <p class="t-text">"I was able to follow the steps easily. The project came together exactly as the diagrams showed."</p>
-                <span class="t-author">David R. — Austin, TX</span>
-            </div>
-            <div class="t-card">
-                <img src="https://randomuser.me/api/portraits/men/45.jpg" loading="lazy" class="t-img" alt="James M.">
-                <p class="t-text">"The checklists helped me organize my shopping trip so I didn't have to go back for forgotten parts."</p>
-                <span class="t-author">James M. — Portland, OR</span>
-            </div>
-            <div class="t-card">
-                <img src="https://randomuser.me/api/portraits/men/56.jpg" loading="lazy" class="t-img" alt="Michael B.">
-                <p class="t-text">"Clear diagrams. It definitely made the assembly process much more straightforward than free plans."</p>
-                <span class="t-author">Michael B. — London, UK</span>
-            </div>
+        <h2 class="section-title">Customer <span>Support</span></h2>
+        <div class="support-box">
+            <p style="margin-bottom: 15px; font-weight: 600;">Have questions about the plans?</p>
+            <p style="color: #64748b; margin-bottom: 20px; font-size: 0.95rem;">We are here to help. For support inquiries or assistance with your order, please reach out to us at:</p>
+            <p style="color: var(--primary); font-weight: 700; font-size: 1.1rem;">support@yourdomain.com</p>
         </div>
     </div>
 </section>
 
-<footer style="padding: 60px 0; text-align: center; font-size: 0.85rem; color: #94A3B8; background: #0b1222;">
+<footer>
     <div class="container">
-        <p style="margin-bottom: 15px;">&copy; Woodworking Plans & Projects. All Rights Reserved.</p>
-        
-        <p style="margin-bottom: 15px; max-width: 700px; margin: 0 auto 20px;">
-            This site is operated by an independent affiliate of RyanShedPlans. For product support, please contact the vendor directly via the links provided on the checkout page.
+        <p>&copy; 2026 Woodworking Project Hub. All Rights Reserved.</p>
+        <p class="affiliate-note">
+            This site is an independent affiliate and is not part of the Facebook website or Facebook Inc. Additionally, this site is NOT endorsed by Facebook in any way. FACEBOOK is a trademark of FACEBOOK, Inc.
         </p>
-
-        <p>
-            <a href="privacy.html" style="color: #94A3B8;">Privacy Policy</a> • 
-            <a href="terms.html" style="color: #94A3B8;">Terms & Conditions</a> • 
-            <a href="contact.html" style="color: #94A3B8;">Contact Us</a>
-        </p>
+        <div style="margin-top: 20px;">
+            <a href="#" style="color: #94A3B8; text-decoration: none;">Privacy Policy</a> • 
+            <a href="#" style="color: #94A3B8; text-decoration: none;">Terms of Service</a> • 
+            <a href="#" style="color: #94A3B8; text-decoration: none;">Contact Us</a>
+        </div>
     </div>
 </footer>
 
