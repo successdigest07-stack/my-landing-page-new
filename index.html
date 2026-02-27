@@ -9,58 +9,52 @@
     
     <style>
         :root {
-            --primary: #FF6B00; /* Safety Orange - Highest Conversion Color */
+            --primary: #FF6B00; /* High-Visibility Orange */
             --navy: #0F172A;
             --slate: #334155;
             --white: #FFFFFF;
-            --light-bg: #F8FAFC;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', sans-serif; color: var(--slate); line-height: 1.7; background: var(--white); overflow-x: hidden; }
-        
-        /* 1. HERO SECTION - HIGH IMPACT */
+        body { font-family: 'Inter', sans-serif; color: var(--slate); line-height: 1.6; background: #fff; -webkit-font-smoothing: antialiased; }
+
+        /* ✅ FIX: STRONG HERO BACKGROUND IMAGE */
         #hero { 
             position: relative;
-            min-height: 85vh;
+            min-height: 80vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            /* Premium Background: Using a high-res backyard scene with a dark overlay for text clarity */
-            background: linear-gradient(rgba(15, 23, 42, 0.65), rgba(15, 23, 42, 0.65)), 
+            /* High-quality backyard shed result */
+            background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7)), 
                         url('https://www.myshedplans.com/images/sheds/garden-shed.jpg') center/cover no-repeat;
             color: var(--white);
             text-align: center;
-            padding: 100px 20px;
+            padding: 60px 20px;
         }
 
-        .hero-content { max-width: 900px; z-index: 10; }
+        .hero-content { max-width: 850px; z-index: 10; }
         
+        /* ✅ FIX: MOBILE FONT WRAPPING (Using Clamp) */
         h1 { 
             font-family: 'Oswald', sans-serif;
-            font-size: clamp(2.5rem, 7vw, 4.5rem); 
+            font-size: clamp(2.2rem, 8vw, 4.5rem); 
             text-transform: uppercase;
             margin-bottom: 20px; 
             line-height: 1.1;
-            font-weight: 700;
+            text-shadow: 0 4px 15px rgba(0,0,0,0.4);
         }
 
         .hero-sub { 
-            font-size: clamp(1.2rem, 2.5vw, 1.5rem); 
-            margin-bottom: 40px; 
+            font-size: clamp(1.1rem, 2.5vw, 1.4rem); 
+            margin-bottom: 35px; 
             color: #F1F5F9;
-            font-weight: 400;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
-        .hero-trust-line {
-            margin-top: 35px;
-            font-size: 0.95rem;
-            color: #CBD5E1;
-            letter-spacing: 1px;
-            font-weight: 600;
-        }
-
-        /* 2. PREMIUM CTA BUTTONS */
+        /* ✅ FIX: CTA BUTTONS THAT POP (Thumb-Friendly) */
         .cta-button {
             display: inline-block;
             background: var(--primary);
@@ -69,12 +63,14 @@
             font-size: clamp(1.1rem, 2vw, 1.4rem);
             font-weight: 800;
             text-decoration: none;
-            border-radius: 8px;
+            border-radius: 12px;
             text-transform: uppercase;
             box-shadow: 0 10px 25px rgba(255, 107, 0, 0.4);
-            transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transition: 0.3s;
             border: none;
             cursor: pointer;
+            width: 100%; /* Mobile First */
+            max-width: 450px;
         }
 
         .cta-button:hover { 
@@ -83,123 +79,107 @@
             background: #E66000;
         }
 
-        /* 3. VISUAL HIERARCHY & SPACING */
-        .container { width: 92%; max-width: 1150px; margin: 0 auto; }
-        .section-padding { padding: 90px 0; }
-        .text-center { text-align: center; }
-
-        .headline-2 { font-family: 'Oswald', sans-serif; font-size: 2.8rem; color: var(--navy); margin-bottom: 50px; }
-
-        /* 4. PRODUCT SHOWCASE - OFFICIAL ASSETS */
-        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; align-items: center; }
-        .mockup-img { width: 100%; border-radius: 12px; filter: drop-shadow(0 20px 30px rgba(0,0,0,0.1)); }
-        
-        .feature-list { list-style: none; margin-top: 20px; }
-        .feature-list li { margin-bottom: 15px; font-weight: 600; display: flex; align-items: center; }
-        .feature-list li::before { content: '✅'; margin-right: 12px; }
-
-        /* 5. MOBILE OPTIMIZATION */
-        @media (max-width: 768px) {
-            #hero { min-height: 70vh; padding: 80px 20px; }
-            h1 { font-size: 2.8rem; }
-            .cta-button { width: 100%; padding: 20px 10px; }
-            .section-padding { padding: 60px 0; }
-            .headline-2 { font-size: 2.2rem; }
+        /* ✅ FIX: TRUST SIGNALS & SPACING */
+        .trust-line {
+            margin-top: 30px;
+            font-size: 0.9rem;
+            color: #CBD5E1;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 600;
         }
 
-        /* TESTIMONIALS - PREMIUM CARDS */
-        .testimonial-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; margin-top: 40px; }
-        .testimonial-card { background: var(--white); padding: 40px; border-radius: 20px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); border-top: 6px solid var(--primary); }
-        .testimonial-card p { font-style: italic; font-size: 1.1rem; margin-bottom: 20px; }
+        .container { width: 90%; max-width: 1100px; margin: 0 auto; }
+        .section-padding { padding: 80px 0; }
         
-        footer { background: var(--navy); color: #94A3B8; padding: 60px 0; text-align: center; }
-        footer a { color: var(--white); text-decoration: none; margin: 0 10px; font-size: 0.9rem; }
+        /* ✅ FIX: BETTER IMAGES FROM AFFILIATE RESOURCE */
+        .product-shot {
+            width: 100%;
+            max-width: 500px;
+            filter: drop-shadow(0 20px 40px rgba(0,0,0,0.15));
+            border-radius: 10px;
+        }
+
+        /* TESTIMONIAL CARDS */
+        .testimonial-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 25px; 
+            margin-top: 40px; 
+        }
+        .t-card { 
+            background: #F8FAFC; 
+            padding: 30px; 
+            border-radius: 15px; 
+            border-left: 5px solid var(--primary);
+            text-align: left;
+        }
+
+        /* MOBILE FIXES */
+        @media (max-width: 768px) {
+            .section-padding { padding: 50px 0; }
+            .hero-content { padding-top: 40px; }
+            .t-card { padding: 20px; }
+        }
     </style>
 </head>
 <body>
 
     <header id="hero">
         <div class="hero-content">
-            <p style="text-transform: uppercase; letter-spacing: 4px; font-weight: 700; color: var(--primary); margin-bottom: 15px;">Official Woodworking Collection</p>
-            <h1>Build Your Perfect Shed <br><span style="color: var(--white);">In One Weekend.</span></h1>
-            <p class="hero-sub">Stop struggling with confusing blueprints. Access 12,000+ LEGO-style shed plans that guide you through every cut, joint, and nail.</p>
+            <p style="text-transform: uppercase; letter-spacing: 3px; font-weight: 700; color: var(--primary); margin-bottom: 10px;">The #1 Woodworking Resource</p>
+            <h1>Build Your Perfect Shed <br>In One Weekend</h1>
+            <p class="hero-sub">Access 12,000+ architect-grade plans with step-by-step 3D diagrams. No guesswork. No wasted lumber.</p>
             
-            <a href="https://ryanshedplan.com/main/?affiliate=XXXXX" class="cta-button">Access All 12,000 Plans Now →</a>
+            <a href="https://ryanshedplan.com/main/?affiliate=XXXXX" class="cta-button">Get My Shed Plans Now →</a>
             
-            <p class="hero-trust-line">🛡️ Trusted by 30,000+ DIY Builders Worldwide</p>
+            <p class="trust-line">🛡️ Trusted by 30,000+ DIY Builders Worldwide</p>
         </div>
     </header>
 
-    <section class="section-padding container">
-        <div class="product-grid">
-            <div>
-                <h2 class="headline-2" style="margin-bottom: 20px; text-align: left;">Like Having a <span style="color: var(--primary);">Master Carpenter</span> Help You.</h2>
-                <p style="font-size: 1.1rem; margin-bottom: 30px;">Every plan includes 3D exploded views and exact material lists, so you save money by buying only what you need.</p>
-                
-                <ul class="feature-list">
-                    <li>12,000+ Detailed Blueprint Designs</li>
-                    <li>3D "Exploded View" Diagrams</li>
-                    <li>Complete Materials & Tool Lists</li>
-                    <li>Step-by-Step LEGO-Style Instructions</li>
+    <section class="section-padding container" style="text-align: center;">
+        <h2 style="font-family: 'Oswald', sans-serif; font-size: 2.5rem; margin-bottom: 40px;">What's Inside The Collection</h2>
+        <div style="display: flex; flex-wrap: wrap; gap: 40px; align-items: center; justify-content: center;">
+            <img src="https://d2hxwhv2sc3sef.cloudfront.net/go/wp-content/uploads/2023/05/rs1box-transparent.png" alt="Shed Plans Box" class="product-shot">
+            <div style="text-align: left; max-width: 450px;">
+                <ul style="list-style: none;">
+                    <li style="margin-bottom: 15px;">✅ <b>12,000+ Pro Designs:</b> From small tool sheds to large workshops.</li>
+                    <li style="margin-bottom: 15px;">✅ <b>3D Exploded Views:</b> See every joint before you cut.</li>
+                    <li style="margin-bottom: 15px;">✅ <b>Exact Material Lists:</b> Save $200+ by buying only what you need.</li>
+                    <li style="margin-bottom: 15px;">✅ <b>Beginner Friendly:</b> LEGO-style step-by-step instructions.</li>
                 </ul>
             </div>
-            <div>
-                <img src="https://d2hxwhv2sc3sef.cloudfront.net/go/wp-content/uploads/2023/05/rs1box-transparent.png" alt="Ryan Shed Plans Master Collection" class="mockup-img">
+        </div>
+    </section>
+
+    <section class="section-padding" style="background: #fff; border-top: 1px solid #E2E8F0;">
+        <div class="container text-center">
+            <h2 style="font-family: 'Oswald', sans-serif; font-size: 2.2rem; margin-bottom: 10px;">Real Results</h2>
+            <p style="margin-bottom: 40px;">Join thousands of homeowners who built it themselves.</p>
+            
+            <div class="testimonial-grid">
+                <div class="t-card">
+                    <p style="font-style: italic; margin-bottom: 15px;">"I've never built anything in my life. These plans were so clear I finished my frame in one Saturday. My neighbors think I hired a pro!"</p>
+                    <b>— David R., Florida</b>
+                </div>
+                <div class="t-card">
+                    <p style="font-style: italic; margin-bottom: 15px;">"The materials list saved me $240 in lumber. I knew exactly what to buy and didn't have to make any second trips to Home Depot."</p>
+                    <b>— Mike T., Ohio</b>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="section-padding" style="background: var(--light-bg);">
-        <div class="container">
-            <h2 class="headline-2 text-center">A Design For <span style="color: var(--primary);">Every Purpose</span></h2>
-            <div class="product-grid">
-                <img src="https://www.myshedplans.com/images/sheds/garden-shed.jpg" alt="Garden Shed" class="mockup-img">
-                <img src="https://d2hxwhv2sc3sef.cloudfront.net/go/wp-content/uploads/2024/08/lean-to5135.jpg" alt="Lean-To Shed" class="mockup-img">
-                <img src="https://www.myshedplans.com/images/sheds/tool-shed-plans.jpg" alt="Tool Shed" class="mockup-img">
-            </div>
-            <div class="text-center" style="margin-top: 50px;">
-                <a href="https://ryanshedplan.com/main/?affiliate=XXXXX" class="cta-button">See All Available Designs →</a>
-            </div>
+    <section class="section-padding container text-center">
+        <div style="background: var(--navy); color: white; padding: 60px 30px; border-radius: 20px;">
+            <h2 style="font-family: 'Oswald', sans-serif; font-size: 2.5rem; margin-bottom: 20px;">Ready to Start Your Project?</h2>
+            <p style="margin-bottom: 40px; opacity: 0.8;">Download the entire 12,000 plan collection instantly. Risk-free for 60 days.</p>
+            <a href="https://ryanshedplan.com/main/?affiliate=XXXXX" class="cta-button">Build Your Shed Today →</a>
         </div>
     </section>
 
-    <section class="section-padding container">
-        <h2 class="headline-2 text-center">Real Success Stories</h2>
-        <div class="testimonial-row">
-            <div class="testimonial-card">
-                <p>"I've never built anything in my life. These plans were clearer than IKEA instructions. I finished my frame in one Saturday!"</p>
-                <b>— David R., Florida</b>
-            </div>
-            <div class="testimonial-card">
-                <p>"The materials list saved me $240 in lumber. I knew exactly what to buy and didn't have any waste. Best $37 I've ever spent."</p>
-                <b>— Mike T., Ohio</b>
-            </div>
-            <div class="testimonial-card">
-                <p>"I was quoted $5,000 for a shed. Built it myself for $900 using these blueprints. It's now the best looking part of my yard."</p>
-                <b>— Sarah W., Canada</b>
-            </div>
-        </div>
-    </section>
-
-    <section class="section-padding" style="background: var(--navy); color: white; text-align: center;">
-        <div class="container">
-            <img src="https://www.myshedplans.com/images/bonus-grp.jpg" alt="Free Bonuses" style="max-width: 400px; margin-bottom: 30px; border-radius: 10px;">
-            <h2 class="headline-2" style="color: white;">100% Risk-Free For 60 Days</h2>
-            <p style="font-size: 1.2rem; max-width: 800px; margin: 0 auto 40px; opacity: 0.8;">Take 60 days to build your shed. If you aren't completely thrilled, we'll refund every penny. No questions asked.</p>
-            <a href="https://ryanshedplan.com/main/?affiliate=XXXXX" class="cta-button" style="padding: 25px 60px; font-size: 1.6rem;">GET INSTANT ACCESS NOW</a>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <h3>HAPPY PLANETA</h3>
-            <div style="margin: 30px 0;">
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms of Service</a>
-                <a href="#">Contact Us</a>
-            </div>
-            <p style="font-size: 0.8rem; opacity: 0.5;">&copy; 2026 Happy Planeta. ClickBank is the retailer of this product.</p>
-        </div>
+    <footer style="padding: 40px 0; text-align: center; font-size: 0.8rem; color: #94A3B8;">
+        <p>&copy; 2026 Happy Planeta. ClickBank is the retailer of this product.</p>
     </footer>
 
 </body>
