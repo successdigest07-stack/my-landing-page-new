@@ -62,7 +62,7 @@ body { font-family: 'Inter', sans-serif; color: var(--slate); line-height: 1.6; 
 .section-title { font-family: 'Oswald', sans-serif; font-size: 2.8rem; margin-bottom: 25px; text-transform: uppercase; }
 .section-title span { color: var(--primary); }
 
-/* FEATURES GRID (CONSISTENT ASPECT RATIO) */
+/* FEATURES GRID */
 .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; margin-top: 40px; }
 .feature-card { background: var(--white); border-radius: 12px; overflow: hidden; box-shadow: 0 10px 20px rgba(0,0,0,0.04); border: 1px solid #f1f5f9; text-align: center; }
 .feature-img { width: 100%; height: 200px; object-fit: cover; }
@@ -70,11 +70,21 @@ body { font-family: 'Inter', sans-serif; color: var(--slate); line-height: 1.6; 
 .feature-info h3 { font-family: 'Oswald'; font-size: 1.4rem; margin-bottom: 8px; color: var(--navy); }
 .feature-info p { font-size: 0.95rem; color: #64748b; }
 
-/* SUPPORT SECTION */
-.support-section { background: var(--light-bg); border-top: 1px solid #e2e8f0; text-align: center; }
-.support-box { max-width: 600px; margin: 0 auto; padding: 30px; background: white; border-radius: 10px; border: 1px solid #e2e8f0; }
+/* TESTIMONIALS */
+.testimonials-section { background: var(--light-bg); padding: 80px 0; }
+.t-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 25px; margin-top: 40px; }
+.t-card { background: var(--white); padding: 30px; border-radius: 12px; border: 1px solid #e2e8f0; text-align: left; position: relative; }
+.t-img { width: 60px; height: 60px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; border: 2px solid var(--primary); }
+.t-stars { color: #FFB800; font-size: 1rem; margin-bottom: 10px; }
+.t-text { font-size: 0.95rem; color: var(--slate); font-style: italic; margin-bottom: 15px; }
+.t-name { font-weight: 700; font-size: 0.9rem; color: var(--navy); display: block; }
+.t-loc { font-size: 0.8rem; color: #64748b; }
 
-/* FOOTER & DISCLOSURE */
+/* SUPPORT SECTION */
+.support-section { background: white; border-top: 1px solid #e2e8f0; text-align: center; }
+.support-box { max-width: 600px; margin: 0 auto; padding: 30px; background: var(--light-bg); border-radius: 10px; border: 1px solid #e2e8f0; }
+
+/* FOOTER */
 footer { padding: 60px 0; text-align: center; background: #0F172A; color: #94A3B8; font-size: 0.85rem; }
 .affiliate-note { font-size: 0.75rem; color: #64748b; margin-top: 15px; max-width: 700px; margin-left: auto; margin-right: auto; line-height: 1.5; }
 
@@ -104,7 +114,7 @@ footer { padding: 60px 0; text-align: center; background: #0F172A; color: #94A3B
             </div>
             <div class="flex-half">
                 <h2 class="section-title">Precision-Engineered <span>For Success</span></h2>
-                <p style="margin-bottom: 25px;">Avoid the guesswork of free, incomplete sketches. These plans are structured to guide you through every cut and joint with confidence.</p>
+                <p style="margin-bottom: 25px;">Avoid the guesswork of incomplete sketches. These plans are structured to guide you through every cut and joint with confidence.</p>
                 <ul style="list-style: none;">
                     <li style="margin-bottom: 12px;">✅ <b>3D Exploded Views:</b> See exactly how parts fit together.</li>
                     <li style="margin-bottom: 12px;">✅ <b>Comprehensive Material Lists:</b> Purchase only what you need.</li>
@@ -151,12 +161,48 @@ footer { padding: 60px 0; text-align: center; background: #0F172A; color: #94A3B
     </div>
 </section>
 
+<section class="section testimonials-section">
+    <div class="container">
+        <h2 class="section-title" style="text-align: center;">Success <span>Stories</span></h2>
+        <div class="t-grid">
+            <div class="t-card">
+                <img src="https://randomuser.me/api/portraits/men/32.jpg" loading="lazy" class="t-img" alt="Mark T.">
+                <div class="t-stars">★★★★★</div>
+                <p class="t-text">"The material list saved me about $300 at the hardware store. I didn't waste a single piece of lumber."</p>
+                <span class="t-name">Mark T.</span>
+                <span class="t-loc">Denver, CO</span>
+            </div>
+            <div class="t-card">
+                <img src="https://randomuser.me/api/portraits/men/46.jpg" loading="lazy" class="t-img" alt="Steven J.">
+                <div class="t-stars">★★★★★</div>
+                <p class="t-text">"I'm a total beginner. The 3D diagrams made the framing so much easier to understand than free plans I found online."</p>
+                <span class="t-name">Steven J.</span>
+                <span class="t-loc">Austin, TX</span>
+            </div>
+            <div class="t-card">
+                <img src="https://randomuser.me/api/portraits/men/85.jpg" loading="lazy" class="t-img" alt="Brian K.">
+                <div class="t-stars">★★★★★</div>
+                <p class="t-text">"Built the 10x12 garden shed over two weekends. The instructions are logically laid out and very detailed."</p>
+                <span class="t-name">Brian K.</span>
+                <span class="t-loc">Portland, OR</span>
+            </div>
+            <div class="t-card">
+                <img src="https://randomuser.me/api/portraits/men/22.jpg" loading="lazy" class="t-img" alt="David L.">
+                <div class="t-stars">★★★★★</div>
+                <p class="t-text">"The exploded views are a game changer. Being able to see how the joints fit together before cutting is worth it."</p>
+                <span class="t-name">David L.</span>
+                <span class="t-loc">Toronto, CA</span>
+            </div>
+        </div>
+    </div>
+</section>
+
 <section class="section support-section">
     <div class="container">
-        <h2 class="section-title">Customer <span>Support</span></h2>
+        <h2 class="section-title">Contact <span>Support</span></h2>
         <div class="support-box">
-            <p style="margin-bottom: 15px; font-weight: 600;">Have questions about the plans?</p>
-            <p style="color: #64748b; margin-bottom: 20px; font-size: 0.95rem;">We are here to help. For support inquiries or assistance with your order, please reach out to us at:</p>
+            <p style="margin-bottom: 15px; font-weight: 600;">Have questions about the blueprints?</p>
+            <p style="color: #64748b; margin-bottom: 20px; font-size: 0.95rem;">For support inquiries or assistance with your order, please reach out to us at:</p>
             <p style="color: var(--primary); font-weight: 700; font-size: 1.1rem;">support@yourdomain.com</p>
         </div>
     </div>
