@@ -4,9 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>12,000+ Shed Plans | Build Your Dream Shed This Weekend</title>
-
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
-
 <style>
 :root {
     --primary: #FF6B00;
@@ -16,193 +14,167 @@
     --white: #FFFFFF;
     --light-bg: #F8FAFC;
 }
-
-* { margin:0; padding:0; box-sizing:border-box; }
-body { font-family: 'Inter', sans-serif; color: var(--slate); line-height:1.6; background: var(--white); overflow-x:hidden; }
-
-/* HERO */
-#hero {
-    position: relative;
-    height: 90vh;
-    min-height: 600px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    background: linear-gradient(rgba(15,23,42,0.65), rgba(15,23,42,0.65)), 
-                url('https://www.myshedplans.com/images/sheds/garden-shed.jpg') center/cover no-repeat scroll;
-    color: var(--white);
-    text-align:center;
-    padding:20px;
-}
-.hero-container { max-width:900px; z-index:5; }
-.hero-tag { text-transform:uppercase; letter-spacing:4px; font-weight:700; color: var(--primary); margin-bottom:20px; display:block; font-size:0.9rem; }
-#hero h1 { font-family:'Oswald',sans-serif; font-size:clamp(2.5rem,8vw,5rem); line-height:1.1; margin-bottom:25px; text-transform:uppercase; }
-.hero-sub { font-size:clamp(1.1rem,2.5vw,1.4rem); margin-bottom:40px; color:#E2E8F0; max-width:700px; margin:0 auto 40px; font-weight:300; }
-.cta-button {
-    display:inline-block;
-    background: var(--primary);
-    color: var(--white);
-    padding:22px 50px;
-    font-size:1.3rem;
-    font-weight:800;
-    text-decoration:none;
-    border-radius:6px;
-    text-transform:uppercase;
-    transition: all 0.3s ease;
-    box-shadow:0 10px 30px rgba(255,107,0,0.3);
-    letter-spacing:1px;
-}
-.cta-button:hover { transform: translateY(-3px); background: var(--primary-hover); box-shadow:0 15px 40px rgba(255,107,0,0.5); }
-
-/* SECTIONS */
-.section { padding:100px 0; }
-.container { width:90%; max-width:1200px; margin:0 auto; }
-.flex-grid { display:flex; align-items:center; gap:60px; flex-wrap:wrap; }
-.flex-half { flex:1; min-width:320px; }
-.product-img { width:100%; border-radius:12px; filter: drop-shadow(0 20px 40px rgba(0,0,0,0.15)); }
-.section-title { font-family:'Oswald',sans-serif; font-size:3rem; margin-bottom:30px; text-transform:uppercase; }
-.section-title span { color: var(--primary); }
-
-/* FEATURES */
-.features-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:30px; margin-top:50px; }
-.feature-card { background: var(--white); border-radius:12px; overflow:hidden; box-shadow:0 10px 20px rgba(0,0,0,0.05); text-align:center; border:1px solid #edf2f7; transition: all 0.3s ease; }
-.feature-card:hover { transform: translateY(-5px); box-shadow:0 15px 25px rgba(0,0,0,0.1); }
-.feature-img { width:100%; height:220px; object-fit:cover; }
-.feature-info { padding:25px 20px; }
-.feature-info h3 { margin-bottom:10px; font-family:'Oswald'; font-size:1.5rem; }
-
-/* TESTIMONIALS */
-.testimonials { background: var(--light-bg); }
-.testimonial-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(280px,1fr)); gap:30px; margin-top:40px; }
-.t-card { background: var(--white); padding:40px; border-radius:12px; box-shadow:0 4px 6px rgba(0,0,0,0.02); display:flex; flex-direction:column; align-items:center; text-align:center; transition: all 0.3s ease; }
-.t-card:hover { transform: translateY(-5px); box-shadow:0 10px 20px rgba(0,0,0,0.08); }
-.t-img { width:100px; height:100px; border-radius:50%; object-fit:cover; margin-bottom:20px; border:3px solid var(--primary); }
-.t-text { font-style:italic; color: var(--slate); margin-bottom:20px; font-size:1rem; line-height:1.4; }
-.t-author { font-weight:700; text-transform:uppercase; font-size:0.9rem; letter-spacing:1px; }
-
-/* MOBILE */
-@media (max-width:768px) {
-    #hero { height:auto; padding:120px 20px; }
-    .section { padding:60px 0; }
-    .section-title { font-size:2.2rem; }
-    .flex-grid { gap:30px; }
-    .cta-button { width:100%; text-align:center; padding:20px; }
-}
+* {margin:0; padding:0; box-sizing:border-box;}
+body {font-family:'Inter',sans-serif; color:var(--slate); line-height:1.6; background:var(--white); overflow-x:hidden;}
+#hero {position:relative; height:90vh; min-height:600px; display:flex; align-items:center; justify-content:center; background: linear-gradient(rgba(15,23,42,0.65), rgba(15,23,42,0.65)), url('https://www.myshedplans.com/images/sheds/garden-shed.jpg') center/cover no-repeat scroll; color:var(--white); text-align:center; padding:20px;}
+.hero-container {max-width:900px; z-index:5;}
+.hero-tag {text-transform:uppercase; letter-spacing:4px; font-weight:700; color:var(--primary); margin-bottom:20px; display:block; font-size:0.9rem;}
+#hero h1 {font-family:'Oswald',sans-serif; font-size:clamp(2.5rem,8vw,5rem); line-height:1.1; margin-bottom:25px; text-transform:uppercase;}
+.hero-sub {font-size:clamp(1.1rem,2.5vw,1.4rem); margin-bottom:40px; color:#E2E8F0; max-width:700px; margin:0 auto 40px; font-weight:300;}
+.cta-button {display:inline-block; background:var(--primary); color:var(--white); padding:22px 50px; font-size:1.3rem; font-weight:800; text-decoration:none; border-radius:6px; text-transform:uppercase; transition:all 0.3s ease; box-shadow:0 10px 30px rgba(255,107,0,0.3); letter-spacing:1px;}
+.cta-button:hover {transform:translateY(-3px); background:var(--primary-hover); box-shadow:0 15px 40px rgba(255,107,0,0.5);}
+.section {padding:100px 0;}
+.container {width:90%; max-width:1200px; margin:0 auto;}
+.flex-grid {display:flex; align-items:center; gap:60px; flex-wrap:wrap;}
+.flex-half {flex:1; min-width:320px;}
+.product-img {width:100%; border-radius:12px; filter:drop-shadow(0 20px 40px rgba(0,0,0,0.15));}
+.section-title {font-family:'Oswald',sans-serif; font-size:3rem; margin-bottom:30px; text-transform:uppercase;}
+.section-title span {color:var(--primary);}
+.features-grid {display:grid; grid-template-columns:repeat(auto-fit, minmax(250px,1fr)); gap:30px; margin-top:50px;}
+.feature-card {background:var(--white); border-radius:12px; overflow:hidden; box-shadow:0 10px 20px rgba(0,0,0,0.05); text-align:center; border:1px solid #edf2f7; transition:all 0.3s ease;}
+.feature-card:hover {transform:translateY(-5px); box-shadow:0 15px 25px rgba(0,0,0,0.1);}
+.feature-img {width:100%; height:220px; object-fit:cover;}
+.feature-info {padding:25px 20px;}
+.feature-info h3 {margin-bottom:10px; font-family:'Oswald'; font-size:1.5rem;}
+.testimonials {background:var(--light-bg);}
+.testimonial-grid {display:grid; grid-template-columns:repeat(auto-fit, minmax(280px,1fr)); gap:30px; margin-top:40px;}
+.t-card {background:var(--white); padding:40px; border-radius:12px; box-shadow:0 4px 6px rgba(0,0,0,0.02); display:flex; flex-direction:column; align-items:center; text-align:center; transition:all 0.3s ease;}
+.t-card:hover {transform:translateY(-5px); box-shadow:0 10px 20px rgba(0,0,0,0.08);}
+.t-img {width:100px; height:100px; border-radius:50%; object-fit:cover; margin-bottom:20px; border:3px solid var(--primary);}
+.t-text {font-style:italic; color:var(--slate); margin-bottom:20px; font-size:1rem; line-height:1.4;}
+.t-author {font-weight:700; text-transform:uppercase; font-size:0.9rem; letter-spacing:1px;}
+footer {padding:50px 0; text-align:center; font-size:0.8rem; color:#94A3B8; background:#0b1222;}
+.footer-links {margin-top:20px;}
+.footer-links a {color:#94A3B8; margin:0 10px; text-decoration:none;}
+.footer-links a:hover {text-decoration:underline;}
+@media(max-width:768px){#hero{height:auto; padding:120px 20px;} .section{padding:60px 0;} .section-title{font-size:2.2rem;} .flex-grid{gap:30px;} .cta-button{width:100%; text-align:center; padding:20px;}}
 </style>
 </head>
 <body>
 
 <!-- HERO -->
 <header id="hero">
-    <div class="hero-container">
-        <span class="hero-tag">Master Woodworking Blueprint Collection</span>
-        <h1>Build a Stunning Shed <br><span style="color: var(--primary);">This Weekend!</span></h1>
-        <p class="hero-sub">Access 12,000+ professionally designed shed plans with step-by-step instructions and exact material lists for a perfect build.</p>
-        <a href="https://ryanshedplan.com/main/?affiliate=XXXXX" class="cta-button">Start Building Now</a>
-    </div>
+<div class="hero-container">
+<span class="hero-tag">Master Woodworking Blueprint Collection</span>
+<h1>Build a Stunning Shed <br><span style="color: var(--primary);">This Weekend!</span></h1>
+<p class="hero-sub">Access 12,000+ professionally designed shed plans with step-by-step instructions and exact material lists for a perfect build.</p>
+<a href="https://ryanshedplan.com/main/?affiliate=XXXXX" class="cta-button">Start Building Now</a>
+</div>
 </header>
 
 <!-- PRODUCT PREVIEW -->
 <section class="section">
-    <div class="container">
-        <div class="flex-grid">
-            <div class="flex-half">
-                <img src="https://d2hxwhv2sc3sef.cloudfront.net/go/wp-content/uploads/2023/05/rs1box-transparent.png" class="product-img" alt="Ryan Shed Plans Package" loading="lazy">
-            </div>
-            <div class="flex-half">
-                <h2 class="section-title">The Complete <span>Builder's Vault</span></h2>
-                <p style="font-size:1.1rem; margin-bottom:30px;">Stop wasting time on incomplete free plans. Our blueprints are designed for accuracy, speed, and massive cost savings on lumber.</p>
-                <ul style="list-style:none;">
-                    <li style="margin-bottom:15px;">✅ <b>3D Exploded Views:</b> See every joint before you cut.</li>
-                    <li style="margin-bottom:15px;">✅ <b>Exact Material Lists:</b> Know exactly what to buy.</li>
-                    <li style="margin-bottom:15px;">✅ <b>Beginner Friendly:</b> Plain English instructions for DIYers.</li>
-                </ul>
-            </div>
-        </div>
-    </div>
+<div class="container">
+<div class="flex-grid">
+<div class="flex-half">
+<img src="https://d2hxwhv2sc3sef.cloudfront.net/go/wp-content/uploads/2023/05/rs1box-transparent.png" class="product-img" alt="Ryan Shed Plans Package" loading="lazy">
+</div>
+<div class="flex-half">
+<h2 class="section-title">The Complete <span>Builder's Vault</span></h2>
+<p style="font-size:1.1rem; margin-bottom:30px;">Stop wasting time on incomplete free plans. Our blueprints are designed for accuracy, speed, and massive cost savings on lumber.</p>
+<ul style="list-style:none;">
+<li style="margin-bottom:15px;">✅ <b>3D Exploded Views:</b> See every joint before you cut.</li>
+<li style="margin-bottom:15px;">✅ <b>Exact Material Lists:</b> Know exactly what to buy.</li>
+<li style="margin-bottom:15px;">✅ <b>Beginner Friendly:</b> Plain English instructions for DIYers.</li>
+</ul>
+</div>
+</div>
+</div>
 </section>
 
 <!-- FEATURES -->
 <section class="section" style="background-color: var(--navy); color:white;">
-    <div class="container">
-        <h2 class="section-title" style="color:white; text-align:center;">Designs For <span>Every Purpose</span></h2>
-        <div class="features-grid">
-            <div class="feature-card">
-                <img src="https://www.myshedplans.com/images/sheds/garden-shed.jpg" class="feature-img" alt="Garden Shed" loading="lazy">
-                <div class="feature-info" style="color: var(--slate);">
-                    <h3>Garden Sheds</h3>
-                    <p>Beautiful, functional storage for your backyard tools and equipment.</p>
-                </div>
-            </div>
-            <div class="feature-card">
-                <img src="https://d2hxwhv2sc3sef.cloudfront.net/go/wp-content/uploads/2024/08/lean-to5135.jpg" class="feature-img" alt="Modern Lean-To" loading="lazy">
-                <div class="feature-info" style="color: var(--slate);">
-                    <h3>Modern Lean-To</h3>
-                    <p>Space-saving designs perfect for tight side-yards and property lines.</p>
-                </div>
-            </div>
-            <div class="feature-card">
-                <img src="https://www.myshedplans.com/images/sheds/tool-shed-plans.jpg" class="feature-img" alt="Workshop" loading="lazy">
-                <div class="feature-info" style="color: var(--slate);">
-                    <h3>Professional Workshops</h3>
-                    <p>Heavy-duty structures designed for power tools and large projects.</p>
-                </div>
-            </div>
-            <div class="feature-card">
-                <img src="https://www.myshedplans.com/images/sheds/wood-storage.jpg" class="feature-img" alt="Wood Storage Shed" loading="lazy">
-                <div class="feature-info" style="color: var(--slate);">
-                    <h3>Storage Sheds</h3>
-                    <p>Extra storage space for lumber, tools, and DIY project materials.</p>
-                </div>
-            </div>
-        </div>
-        <div style="text-align:center; margin-top:50px;">
-            <a href="https://ryanshedplan.com/main/?affiliate=XXXXX" class="cta-button">Download All 12,000 Plans</a>
-        </div>
-    </div>
+<div class="container">
+<h2 class="section-title" style="color:white; text-align:center;">Designs For <span>Every Purpose</span></h2>
+<div class="features-grid">
+<div class="feature-card">
+<img src="https://www.myshedplans.com/images/sheds/garden-shed.jpg" class="feature-img" alt="Garden Shed" loading="lazy">
+<div class="feature-info" style="color: var(--slate);">
+<h3>Garden Sheds</h3>
+<p>Beautiful, functional storage for your backyard tools and equipment.</p>
+</div>
+</div>
+<div class="feature-card">
+<img src="https://d2hxwhv2sc3sef.cloudfront.net/go/wp-content/uploads/2024/08/lean-to5135.jpg" class="feature-img" alt="Modern Lean-To" loading="lazy">
+<div class="feature-info" style="color: var(--slate);">
+<h3>Modern Lean-To</h3>
+<p>Space-saving designs perfect for tight side-yards and property lines.</p>
+</div>
+</div>
+<div class="feature-card">
+<img src="https://www.myshedplans.com/images/sheds/tool-shed-plans.jpg" class="feature-img" alt="Professional Workshop" loading="lazy">
+<div class="feature-info" style="color: var(--slate);">
+<h3>Professional Workshops</h3>
+<p>Heavy-duty structures designed for power tools and large projects.</p>
+</div>
+</div>
+<div class="feature-card">
+<img src="https://www.myshedplans.com/images/sheds/garden-shed-2.jpg" class="feature-img" alt="Storage Shed" loading="lazy">
+<div class="feature-info" style="color: var(--slate);">
+<h3>Storage Sheds</h3>
+<p>Extra storage space for lumber, tools, and DIY project materials.</p>
+</div>
+</div>
+</div>
+<div style="text-align:center; margin-top:50px;">
+<a href="https://ryanshedplan.com/main/?affiliate=XXXXX" class="cta-button">Download All 12,000 Plans</a>
+</div>
+</div>
 </section>
 
 <!-- TESTIMONIALS -->
 <section class="section testimonials">
-    <div class="container">
-        <h2 class="section-title" style="text-align:center;">Trusted By <span>30,000+ Builders</span></h2>
-        <div class="testimonial-grid">
-            <div class="t-card">
-                <img src="https://images.pexels.com/photos/1212984/pexels-photo-1212984.jpeg" class="t-img" alt="David R." loading="lazy">
-                <p class="t-text">"I've never built anything before. These plans made it impossible to fail. My workshop looks like a pro built it!"</p>
-                <span class="t-author">David R. — Austin, TX</span>
-            </div>
-            <div class="t-card">
-                <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg" class="t-img" alt="James M." loading="lazy">
-                <p class="t-text">"The material list saved me over $200 at the hardware store. I didn't waste a single piece of lumber."</p>
-                <span class="t-author">James M. — Portland, OR</span>
-            </div>
-            <div class="t-card">
-                <img src="https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg" class="t-img" alt="Michael B." loading="lazy">
-                <p class="t-text">"The 3D diagrams are a game changer. Being able to see the framing before I started saved me so much frustration."</p>
-                <span class="t-author">Michael B. — London, UK</span>
-            </div>
-            <div class="t-card">
-                <img src="https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg" class="t-img" alt="Robert L." loading="lazy">
-                <p class="t-text">"I built my backyard shed in just two weekends. These plans are clear, precise, and beginner-friendly."</p>
-                <span class="t-author">Robert L. — New York, NY</span>
-            </div>
-        </div>
-    </div>
+<div class="container">
+<h2 class="section-title" style="text-align:center;">Trusted By <span>30,000+ Builders</span></h2>
+<div class="testimonial-grid">
+<div class="t-card">
+<img src="https://images.pexels.com/photos/1212984/pexels-photo-1212984.jpeg" class="t-img" alt="David R." loading="lazy">
+<p class="t-text">"I've never built anything before. These plans made it impossible to fail. My workshop looks like a pro built it!"</p>
+<span class="t-author">David R. — Austin, TX</span>
+</div>
+<div class="t-card">
+<img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg" class="t-img" alt="James M." loading="lazy">
+<p class="t-text">"The material list saved me over $200 at the hardware store. I didn't waste a single piece of lumber."</p>
+<span class="t-author">James M. — Portland, OR</span>
+</div>
+<div class="t-card">
+<img src="https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg" class="t-img" alt="Michael B." loading="lazy">
+<p class="t-text">"The 3D diagrams are a game changer. Being able to see the framing before I started saved me so much frustration."</p>
+<span class="t-author">Michael B. — London, UK</span>
+</div>
+<div class="t-card">
+<img src="https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg" class="t-img" alt="Robert L." loading="lazy">
+<p class="t-text">"I built my backyard shed in just two weekends. These plans are clear, precise, and beginner-friendly."</p>
+<span class="t-author">Robert L. — New York, NY</span>
+</div>
+</div>
+</div>
 </section>
 
 <!-- FINAL CTA -->
 <section class="section" style="text-align:center; background:var(--navy); color:white;">
-    <div class="container">
-        <h2 class="section-title" style="color:white;">Ready to start your <span>Dream Project?</span></h2>
-        <p style="margin-bottom:40px; font-size:1.2rem; opacity:0.8;">Join thousands of hobbyists building professional-grade sheds for a fraction of the cost.</p>
-        <a href="https://ryanshedplan.com/main/?affiliate=XXXXX" class="cta-button">Get Instant Access Now</a>
-        <p style="margin-top:20px; font-size:0.8rem; opacity:0.5;">60-Day Money Back Guarantee • 100% Secure Checkout</p>
-    </div>
+<div class="container">
+<h2 class="section-title" style="color:white;">Ready to start your <span>Dream Project?</span></h2>
+<p style="margin-bottom:40px; font-size:1.2rem; opacity:0.8;">Join thousands of hobbyists building professional-grade sheds for a fraction of the cost.</p>
+<a href="https://ryanshedplan.com/main/?affiliate=XXXXX" class="cta-button">Get Instant Access Now</a>
+<p style="margin-top:20px; font-size:0.8rem; opacity:0.5;">60-Day Money Back Guarantee • 100% Secure Checkout</p>
+</div>
 </section>
 
-<footer style="padding:50px 0; text-align:center; font-size:0.8rem; color:#94A3B8; background:#0b1222;">
-    <p>&copy; 2026 RyanShedPlans Official Affiliate Partner. All Rights Reserved.</p>
+<!-- PRIVACY / TERMS / CONTACT -->
+<section class="section" style="background:var(--light-bg); text-align:center; padding:50px 20px;">
+<h2 class="section-title" style="margin-bottom:30px;">Important Info</h2>
+<p>📜 <a href="#privacy" style="color:var(--primary);">Privacy Policy</a> • <a href="#terms" style="color:var(--primary);">Terms & Conditions</a> • Contact: <a href="mailto:hello@happyplaneta.com" style="color:var(--primary);">hello@happyplaneta.com</a></p>
+<div id="privacy" style="margin-top:30px; text-align:left; max-width:900px; margin-left:auto; margin-right:auto;">
+<h3>Privacy Policy</h3>
+<p>We respect your privacy and do not share your information. All transactions are secured.</p>
+<h3>Terms & Conditions</h3>
+<p>By purchasing the plans, you agree to our terms. Plans are for personal use only. Distribution is prohibited.</p>
+</div>
+</section>
+
+<footer>
+<p>&copy; 2026 RyanShedPlans Official Affiliate Partner. All Rights Reserved.</p>
 </footer>
 
 </body>
