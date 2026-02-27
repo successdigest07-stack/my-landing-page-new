@@ -73,19 +73,20 @@ body { font-family: 'Inter', sans-serif; color: var(--slate); line-height: 1.6; 
 /* TESTIMONIALS */
 .testimonials-section { background: var(--light-bg); padding: 80px 0; }
 .t-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 25px; margin-top: 40px; }
-.t-card { background: var(--white); padding: 30px; border-radius: 12px; border: 1px solid #e2e8f0; text-align: left; position: relative; }
+.t-card { background: var(--white); padding: 30px; border-radius: 12px; border: 1px solid #e2e8f0; text-align: left; }
 .t-img { width: 60px; height: 60px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; border: 2px solid var(--primary); }
 .t-stars { color: #FFB800; font-size: 1rem; margin-bottom: 10px; }
 .t-text { font-size: 0.95rem; color: var(--slate); font-style: italic; margin-bottom: 15px; }
 .t-name { font-weight: 700; font-size: 0.9rem; color: var(--navy); display: block; }
 .t-loc { font-size: 0.8rem; color: #64748b; }
 
-/* SUPPORT SECTION */
-.support-section { background: white; border-top: 1px solid #e2e8f0; text-align: center; }
-.support-box { max-width: 600px; margin: 0 auto; padding: 30px; background: var(--light-bg); border-radius: 10px; border: 1px solid #e2e8f0; }
+/* GUARANTEE BOX */
+.guarantee-box { border: 2px dashed var(--primary); padding: 40px; border-radius: 15px; text-align: center; margin-top: 50px; background: #fffcf9; }
 
 /* FOOTER */
 footer { padding: 60px 0; text-align: center; background: #0F172A; color: #94A3B8; font-size: 0.85rem; }
+.footer-links a { color: #94A3B8; text-decoration: none; margin: 0 10px; transition: color 0.3s; }
+.footer-links a:hover { color: var(--primary); }
 .affiliate-note { font-size: 0.75rem; color: #64748b; margin-top: 15px; max-width: 700px; margin-left: auto; margin-right: auto; line-height: 1.5; }
 
 @media (max-width: 768px) {
@@ -175,7 +176,7 @@ footer { padding: 60px 0; text-align: center; background: #0F172A; color: #94A3B
             <div class="t-card">
                 <img src="https://randomuser.me/api/portraits/men/46.jpg" loading="lazy" class="t-img" alt="Steven J.">
                 <div class="t-stars">★★★★★</div>
-                <p class="t-text">"I'm a total beginner. The 3D diagrams made the framing so much easier to understand than free plans I found online."</p>
+                <p class="t-text">"I'm a total beginner. The 3D diagrams made the framing so much easier to understand than free plans."</p>
                 <span class="t-name">Steven J.</span>
                 <span class="t-loc">Austin, TX</span>
             </div>
@@ -194,31 +195,27 @@ footer { padding: 60px 0; text-align: center; background: #0F172A; color: #94A3B
                 <span class="t-loc">Toronto, CA</span>
             </div>
         </div>
-    </div>
-</section>
 
-<section class="section support-section">
-    <div class="container">
-        <h2 class="section-title">Contact <span>Support</span></h2>
-        <div class="support-box">
-            <p style="margin-bottom: 15px; font-weight: 600;">Have questions about the blueprints?</p>
-            <p style="color: #64748b; margin-bottom: 20px; font-size: 0.95rem;">For support inquiries or assistance with your order, please reach out to us at:</p>
-            <p style="color: var(--primary); font-weight: 700; font-size: 1.1rem;">support@yourdomain.com</p>
+        <div class="guarantee-box">
+            <h2 style="font-family: 'Oswald'; color: var(--navy); margin-bottom: 10px;">60-DAY MONEY BACK GUARANTEE</h2>
+            <p style="max-width: 600px; margin: 0 auto; color: #64748b;">Try the plans today. If you are not satisfied with the quality of the blueprints, we offer a full refund within 60 days of purchase. No questions asked.</p>
         </div>
     </div>
 </section>
 
 <footer>
     <div class="container">
-        <p>&copy; 2026 Woodworking Project Hub. All Rights Reserved.</p>
+        <p style="margin-bottom: 20px;">&copy; 2026 Woodworking Project Hub. All Rights Reserved.</p>
+        
+        <div class="footer-links">
+            <a href="privacy.html">Privacy Policy</a> | 
+            <a href="terms.html">Terms & Conditions</a> | 
+            <a href="mailto:hello@happyplaneta.com">Contact Us</a>
+        </div>
+
         <p class="affiliate-note">
             This site is an independent affiliate and is not part of the Facebook website or Facebook Inc. Additionally, this site is NOT endorsed by Facebook in any way. FACEBOOK is a trademark of FACEBOOK, Inc.
         </p>
-        <div style="margin-top: 20px;">
-            <a href="#" style="color: #94A3B8; text-decoration: none;">Privacy Policy</a> • 
-            <a href="#" style="color: #94A3B8; text-decoration: none;">Terms of Service</a> • 
-            <a href="#" style="color: #94A3B8; text-decoration: none;">Contact Us</a>
-        </div>
     </div>
 </footer>
 
