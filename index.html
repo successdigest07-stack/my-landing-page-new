@@ -26,7 +26,7 @@ overflow-x:hidden;
 /* HERO */
 .hero{
 background:
-linear-gradient(rgba(15,23,42,.75),rgba(15,23,42,.75)),
+linear-gradient(rgba(15,23,42,.78),rgba(15,23,42,.78)),
 url("https://i.postimg.cc/pLF4F2hK/a-I-don-t-want-it-as-m.jpg") center/cover no-repeat;
 padding:120px 20px;
 text-align:center;
@@ -40,7 +40,7 @@ margin-bottom:20px;
 }
 
 .hero p{
-max-width:740px;
+max-width:760px;
 margin:0 auto 35px;
 color:#e5e7eb;
 font-size:1.15rem;
@@ -52,15 +52,15 @@ background:var(--primary);
 color:#fff;
 padding:18px 44px;
 font-weight:800;
-border-radius:6px;
+border-radius:8px;
 text-decoration:none;
-box-shadow:0 12px 30px rgba(255,107,0,.35);
+box-shadow:0 14px 36px rgba(255,107,0,.4);
 }
 
 .trust{
 margin-top:18px;
 font-size:.85rem;
-opacity:.85;
+opacity:.9;
 }
 
 /* SECTIONS */
@@ -71,14 +71,14 @@ opacity:.85;
 .grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
+gap:28px;
 }
 
 .card{
 background:#fff;
-border-radius:14px;
+border-radius:16px;
 overflow:hidden;
-box-shadow:0 10px 28px rgba(0,0,0,.08);
+box-shadow:0 12px 32px rgba(0,0,0,.1);
 }
 
 .card img{
@@ -90,7 +90,7 @@ display:block;
 
 .card h3{
 text-align:center;
-padding:16px;
+padding:18px;
 font-weight:700;
 }
 
@@ -103,9 +103,9 @@ gap:22px;
 
 .feature{
 background:#fff;
-border-radius:14px;
+border-radius:16px;
 padding:28px;
-box-shadow:0 8px 22px rgba(0,0,0,.06);
+box-shadow:0 10px 26px rgba(0,0,0,.07);
 font-weight:600;
 }
 
@@ -118,44 +118,73 @@ color:#475569;
 font-size:1rem;
 }
 
-/* TESTIMONIALS */
-.testimonials{background:var(--light)}
+/* TESTIMONIALS – PREMIUM */
+.testimonials{background:#f1f5f9}
 
 .t-grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:25px;
+gap:30px;
 }
 
 .t-card{
-background:#fff;
-padding:34px;
-border-radius:14px;
-text-align:center;
-box-shadow:0 8px 22px rgba(0,0,0,.06);
+background:linear-gradient(180deg,#ffffff,#f8fafc);
+padding:38px 34px;
+border-radius:18px;
+box-shadow:0 16px 44px rgba(0,0,0,.1);
+position:relative;
 }
 
-.t-card img{
-width:70px;
-height:70px;
+.t-card::before{
+content:"“";
+font-size:4.2rem;
+position:absolute;
+top:12px;
+left:18px;
+color:var(--primary);
+opacity:.15;
+font-family:serif;
+}
+
+.t-head{
+display:flex;
+align-items:center;
+gap:16px;
+margin-bottom:18px;
+}
+
+.t-head img{
+width:64px;
+height:64px;
 border-radius:50%;
 object-fit:cover;
-margin-bottom:15px;
 border:3px solid var(--primary);
 }
 
-.t-card p{
+.t-name{
+font-weight:700;
+font-size:1rem;
+color:#0f172a;
+}
+
+.t-location{
+font-size:.8rem;
+color:#64748b;
+margin-top:2px;
+}
+
+.t-text{
 font-size:.95rem;
 color:#334155;
-margin-bottom:14px;
-line-height:1.6;
+line-height:1.65;
+margin-bottom:10px;
 }
 
 /* FOOTER */
 footer{
 background:#020617;
 color:#94a3b8;
-padding:50px 20px;
+padding:60px 20px;
 font-size:.85rem;
 }
 
@@ -185,11 +214,12 @@ margin-top:40px;
 border-top:1px solid #1e293b;
 padding-top:20px;
 text-align:center;
-line-height:1.7;
+line-height:1.8;
 }
 
+/* MOBILE FIX */
 @media(max-width:768px){
-.hero{padding:90px 15px}
+.hero{padding:90px 16px}
 .card img{height:200px}
 }
 </style>
@@ -200,7 +230,7 @@ line-height:1.7;
 <!-- HERO -->
 <section class="hero">
 <h1>Build a Stunning Shed<br>In One Weekend</h1>
-<p>Stop guessing, stop wasting money. Get instant access to proven shed plans trusted by thousands of DIY builders worldwide.</p>
+<p>Stop guessing and stop wasting money. Get instant access to proven shed plans trusted by thousands of real DIY builders.</p>
 <a href="https://ryanshedplan.com/main/?affiliate=XXXXX" class="btn">Get Instant Access</a>
 <div class="trust">✔ 60-Day Money-Back Guarantee • ✔ Secure Checkout</div>
 </section>
@@ -238,8 +268,8 @@ line-height:1.7;
 
 <div class="features">
 <div class="feature">✔ 12,000+ Professionally Designed Shed Plans</div>
-<div class="feature">✔ Exact Measurements & Cut Lists</div>
-<div class="feature">✔ Step-by-Step Beginner Instructions</div>
+<div class="feature">✔ Exact Measurements, Cut Lists & Layouts</div>
+<div class="feature">✔ Step-by-Step Beginner-Friendly Instructions</div>
 <div class="feature">✔ Save Thousands on Contractors & Materials</div>
 </div>
 
@@ -256,33 +286,55 @@ line-height:1.7;
 <h2 style="text-align:center;margin-bottom:40px">Trusted By Real Builders</h2>
 
 <div class="t-grid">
+
 <div class="t-card">
+<div class="t-head">
 <img src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg" loading="lazy">
-<p>“I had zero building experience before this. The instructions were so clear and visual that I never felt stuck at any stage.”</p>
-<p>“Finished my shed in one weekend and it honestly looks like a professional build.”</p>
-<strong>Mark T. – Texas</strong>
+<div>
+<div class="t-name">Mark T.</div>
+<div class="t-location">Texas, USA</div>
+</div>
+</div>
+<p class="t-text">I had zero building experience before this. The instructions were visual, simple, and impossible to mess up.</p>
+<p class="t-text">Finished my shed in one weekend and it honestly looks professionally built.</p>
 </div>
 
 <div class="t-card">
+<div class="t-head">
 <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg" loading="lazy">
-<p>“I was about to hire a contractor until I found these plans. The material lists alone saved me a ton of money.”</p>
-<p>“Everything fit perfectly. No wasted wood, no rework.”</p>
-<strong>James R. – Ohio</strong>
+<div>
+<div class="t-name">James R.</div>
+<div class="t-location">Ohio, USA</div>
+</div>
+</div>
+<p class="t-text">I was about to hire a contractor until I found these plans.</p>
+<p class="t-text">The material lists alone saved me hundreds of dollars.</p>
 </div>
 
 <div class="t-card">
+<div class="t-head">
 <img src="https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg" loading="lazy">
-<p>“What I liked most was how beginner-friendly everything was. No confusing jargon or missing steps.”</p>
-<p>“If you can use basic tools, you can build from these plans.”</p>
-<strong>Kevin L. – Florida</strong>
+<div>
+<div class="t-name">Kevin L.</div>
+<div class="t-location">Florida, USA</div>
+</div>
+</div>
+<p class="t-text">Very beginner friendly with no confusing steps.</p>
+<p class="t-text">If you can use basic tools, you can build from these plans.</p>
 </div>
 
 <div class="t-card">
+<div class="t-head">
 <img src="https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg" loading="lazy">
-<p>“I’ve tried free plans before and always got stuck. These were on a completely different level.”</p>
-<p>“Worth every penny. I’m already planning my next build.”</p>
-<strong>Brian S. – California</strong>
+<div>
+<div class="t-name">Brian S.</div>
+<div class="t-location">California, USA</div>
 </div>
+</div>
+<p class="t-text">Free plans always got me stuck halfway.</p>
+<p class="t-text">These were on a completely different professional level.</p>
+</div>
+
 </div>
 </div>
 </section>
@@ -311,13 +363,13 @@ line-height:1.7;
 </div>
 
 <div>
-<h4>Disclosure</h4>
-<p>This website contains affiliate links. If you purchase through these links, we may earn a commission at no extra cost to you.</p>
+<h4>Affiliate Disclosure</h4>
+<p>This site contains affiliate links. If you purchase through these links, we may earn a commission at no extra cost to you.</p>
 </div>
 </div>
 
 <div class="footer-bottom">
-<p>✔ 60-Day Money-Back Guarantee is provided by the official product vendor.</p>
+<p>✔ 60-Day Money-Back Guarantee provided by the official product vendor.</p>
 <p>© 2026 All Rights Reserved</p>
 </div>
 </footer>
