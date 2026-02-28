@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>12,000+ Shed Plans | Build Your Shed This Weekend</title>
+<title>Build Your Own Shed – Premium Plans</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 
@@ -11,46 +11,67 @@
 :root{
 --primary:#ff6b00;
 --dark:#0f172a;
+--gray:#475569;
 --light:#f8fafc;
 }
 
 *{margin:0;padding:0;box-sizing:border-box}
+
 body{
 font-family:Inter,sans-serif;
 color:#1e293b;
 line-height:1.6;
 background:#fff;
-overflow-x:hidden;
+}
+
+/* GLOBAL LAYOUT */
+.section{
+padding:100px 20px;
+}
+
+.container{
+max-width:1200px;
+margin:0 auto;
+}
+
+h2{
+font-size:2.3rem;
+margin-bottom:50px;
+text-align:center;
 }
 
 /* HERO */
 .hero{
 background:
-linear-gradient(rgba(15,23,42,.75),rgba(15,23,42,.75)),
+linear-gradient(rgba(15,23,42,.7),rgba(15,23,42,.7)),
 url("https://i.postimg.cc/pLF4F2hK/a-I-don-t-want-it-as-m.jpg") center/cover no-repeat;
-padding:120px 20px;
+padding:140px 20px;
 text-align:center;
 color:#fff;
 }
 
+.hero-content{
+max-width:900px;
+margin:0 auto;
+}
+
 .hero h1{
-font-size:clamp(2.4rem,5vw,3.8rem);
+font-size:3.5rem;
 font-weight:800;
-margin-bottom:20px;
+margin-bottom:25px;
 }
 
 .hero p{
-max-width:740px;
-margin:0 auto 35px;
+font-size:1.2rem;
 color:#e5e7eb;
-font-size:1.15rem;
+margin-bottom:40px;
 }
 
 .btn{
 display:inline-block;
 background:var(--primary);
 color:#fff;
-padding:18px 44px;
+padding:20px 48px;
 font-weight:800;
 border-radius:6px;
 text-decoration:none;
@@ -59,138 +80,154 @@ box-shadow:0 12px 30px rgba(255,107,0,.35);
 
 .trust{
 margin-top:18px;
-font-size:.85rem;
-opacity:.85;
+font-size:.9rem;
+opacity:.9;
 }
 
-/* SECTIONS */
-.section{padding:90px 20px}
-.container{max-width:1200px;margin:auto}
-
-/* IMAGE GRID */
+/* SHED GRID */
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
+grid-template-columns:repeat(4,1fr);
+gap:30px;
 }
 
 .card{
 background:#fff;
-border-radius:14px;
+border-radius:16px;
 overflow:hidden;
-box-shadow:0 10px 28px rgba(0,0,0,.08);
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+transition:.3s;
 }
+
+.card:hover{transform:translateY(-5px)}
 
 .card img{
 width:100%;
-height:240px;
+height:230px;
 object-fit:cover;
-display:block;
 }
 
 .card h3{
+padding:20px;
 text-align:center;
-padding:16px;
 font-weight:700;
 }
 
 /* FEATURES */
 .features{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:22px;
+grid-template-columns:repeat(2,1fr);
+gap:30px;
+max-width:900px;
+margin:0 auto;
 }
 
 .feature{
 background:#fff;
+padding:30px;
 border-radius:14px;
-padding:28px;
-box-shadow:0 8px 22px rgba(0,0,0,.06);
+box-shadow:0 8px 20px rgba(0,0,0,.06);
 font-weight:600;
 }
 
-/* SUPPORT COPY */
 .support-copy{
-max-width:900px;
+max-width:750px;
 margin:40px auto 0;
 text-align:center;
-color:#475569;
-font-size:1rem;
+color:var(--gray);
 }
 
 /* TESTIMONIALS */
-.testimonials{background:var(--light)}
+.testimonials{
+background:var(--light);
+}
 
 .t-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:25px;
+grid-template-columns:repeat(2,1fr);
+gap:35px;
+max-width:1000px;
+margin:0 auto;
 }
 
 .t-card{
 background:#fff;
-padding:34px;
-border-radius:14px;
-text-align:center;
-box-shadow:0 8px 22px rgba(0,0,0,.06);
+padding:40px;
+border-radius:16px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
 }
 
-.t-card img{
-width:70px;
-height:70px;
+.t-head{
+display:flex;
+align-items:center;
+gap:15px;
+margin-bottom:20px;
+}
+
+.t-head img{
+width:65px;
+height:65px;
 border-radius:50%;
 object-fit:cover;
-margin-bottom:15px;
 border:3px solid var(--primary);
 }
 
 .t-card p{
-font-size:.95rem;
 color:#334155;
-margin-bottom:14px;
-line-height:1.6;
+margin-bottom:12px;
+}
+
+.t-name{
+font-weight:700;
+color:#0f172a;
 }
 
 /* FOOTER */
 footer{
 background:#020617;
 color:#94a3b8;
-padding:50px 20px;
-font-size:.85rem;
+padding:80px 20px;
 }
 
 .footer-grid{
 max-width:1200px;
-margin:auto;
+margin:0 auto;
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:30px;
+grid-template-columns:2fr 1fr 1fr;
+gap:40px;
 }
 
 footer h4{
 color:#e5e7eb;
-margin-bottom:12px;
-font-size:.95rem;
+margin-bottom:15px;
 }
 
 footer a{
-color:#94a3b8;
-text-decoration:none;
 display:block;
-margin-bottom:6px;
+color:#94a3b8;
+margin-bottom:8px;
+text-decoration:none;
 }
 
 .footer-bottom{
-margin-top:40px;
 border-top:1px solid #1e293b;
-padding-top:20px;
+margin-top:50px;
+padding-top:25px;
 text-align:center;
-line-height:1.7;
+font-size:.85rem;
 }
 
-@media(max-width:768px){
+/* RESPONSIVE */
+@media(max-width:1024px){
+.grid{grid-template-columns:repeat(2,1fr)}
+.features{grid-template-columns:1fr}
+.t-grid{grid-template-columns:1fr}
+.hero h1{font-size:2.8rem}
+}
+
+@media(max-width:600px){
 .hero{padding:90px 15px}
-.card img{height:200px}
+.hero h1{font-size:2.2rem}
 }
 </style>
 </head>
@@ -199,34 +236,23 @@ line-height:1.7;
 
 <!-- HERO -->
 <section class="hero">
-<h1>Build a Stunning Shed<br>In One Weekend</h1>
-<p>Stop guessing, stop wasting money. Get instant access to proven shed plans trusted by thousands of DIY builders worldwide.</p>
-<a href="https://ryanshedplan.com/main/?affiliate=XXXXX" class="btn">Get Instant Access</a>
-<div class="trust">✔ 60-Day Money-Back Guarantee • ✔ Secure Checkout</div>
+<div class="hero-content">
+<h1>Build a Professional Shed<br>Without Hiring Anyone</h1>
+<p>Clear plans, exact measurements, and step-by-step instructions trusted by thousands of DIY builders.</p>
+<a href="#" class="btn">Get Instant Access</a>
+<div class="trust">✔ 60-Day Money-Back Guarantee</div>
+</div>
 </section>
 
-<!-- SHED TYPES -->
+<!-- SHEDS -->
 <section class="section">
 <div class="container">
-<h2 style="text-align:center;margin-bottom:40px">Shed Designs For Every Need</h2>
-
+<h2>Shed Designs For Every Purpose</h2>
 <div class="grid">
-<div class="card">
-<img src="https://i.postimg.cc/fWYvmJBm/openbarn42-768x768.png" loading="lazy">
-<h3>Storage Sheds</h3>
-</div>
-<div class="card">
-<img src="https://i.postimg.cc/G2wymj0Q/modernshed5921.png" loading="lazy">
-<h3>Garden Sheds</h3>
-</div>
-<div class="card">
-<img src="https://i.postimg.cc/HnLsYJLn/rsbarn1.jpg" loading="lazy">
-<h3>Workshop Sheds</h3>
-</div>
-<div class="card">
-<img src="https://i.postimg.cc/d0Ks7N1y/top-shed015.jpg" loading="lazy">
-<h3>Cabin & Barn Sheds</h3>
-</div>
+<div class="card"><img src="https://i.postimg.cc/fWYvmJBm/openbarn42-768x768.png"><h3>Storage Sheds</h3></div>
+<div class="card"><img src="https://i.postimg.cc/G2wymj0Q/modernshed5921.png"><h3>Garden Sheds</h3></div>
+<div class="card"><img src="https://i.postimg.cc/HnLsYJLn/rsbarn1.jpg"><h3>Workshop Sheds</h3></div>
+<div class="card"><img src="https://i.postimg.cc/d0Ks7N1y/top-shed015.jpg"><h3>Cabins & Barns</h3></div>
 </div>
 </div>
 </section>
@@ -234,18 +260,15 @@ line-height:1.7;
 <!-- FEATURES -->
 <section class="section" style="background:#f1f5f9">
 <div class="container">
-<h2 style="text-align:center;margin-bottom:40px">What You Get Instantly</h2>
-
+<h2>What You Get Instantly</h2>
 <div class="features">
 <div class="feature">✔ 12,000+ Professionally Designed Shed Plans</div>
-<div class="feature">✔ Exact Measurements & Cut Lists</div>
-<div class="feature">✔ Step-by-Step Beginner Instructions</div>
-<div class="feature">✔ Save Thousands on Contractors & Materials</div>
+<div class="feature">✔ Exact Measurements & Material Lists</div>
+<div class="feature">✔ Beginner-Friendly Step-by-Step Instructions</div>
+<div class="feature">✔ Save Thousands in Labor & Mistakes</div>
 </div>
-
 <div class="support-copy">
-<p>Every plan is designed to remove confusion, reduce mistakes, and help you build faster with confidence.</p>
-<p>No experience needed — just follow the steps and build it right the first time.</p>
+<p>No experience needed. Every plan is designed to eliminate confusion and help you build with confidence.</p>
 </div>
 </div>
 </section>
@@ -253,72 +276,50 @@ line-height:1.7;
 <!-- TESTIMONIALS -->
 <section class="section testimonials">
 <div class="container">
-<h2 style="text-align:center;margin-bottom:40px">Trusted By Real Builders</h2>
-
+<h2>What Real Builders Are Saying</h2>
 <div class="t-grid">
 <div class="t-card">
-<img src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg" loading="lazy">
-<p>“I had zero building experience before this. The instructions were so clear and visual that I never felt stuck at any stage.”</p>
-<p>“Finished my shed in one weekend and it honestly looks like a professional build.”</p>
-<strong>Mark T. – Texas</strong>
+<div class="t-head">
+<img src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg">
+<div class="t-name">Mark T. – Texas</div>
+</div>
+<p>“The instructions were incredibly clear. I finished my shed in one weekend and it looks professionally built.”</p>
 </div>
 
 <div class="t-card">
-<img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg" loading="lazy">
-<p>“I was about to hire a contractor until I found these plans. The material lists alone saved me a ton of money.”</p>
-<p>“Everything fit perfectly. No wasted wood, no rework.”</p>
-<strong>James R. – Ohio</strong>
+<div class="t-head">
+<img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg">
+<div class="t-name">James R. – Ohio</div>
 </div>
-
-<div class="t-card">
-<img src="https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg" loading="lazy">
-<p>“What I liked most was how beginner-friendly everything was. No confusing jargon or missing steps.”</p>
-<p>“If you can use basic tools, you can build from these plans.”</p>
-<strong>Kevin L. – Florida</strong>
-</div>
-
-<div class="t-card">
-<img src="https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg" loading="lazy">
-<p>“I’ve tried free plans before and always got stuck. These were on a completely different level.”</p>
-<p>“Worth every penny. I’m already planning my next build.”</p>
-<strong>Brian S. – California</strong>
+<p>“Saved thousands by not hiring a contractor. The material list alone was worth it.”</p>
 </div>
 </div>
 </div>
-</section>
-
-<!-- FINAL CTA -->
-<section class="hero" style="padding:90px 20px">
-<h1>Start Building Today</h1>
-<p>Join thousands of DIY builders creating professional-grade sheds at home.</p>
-<a href="https://ryanshedplan.com/main/?affiliate=XXXXX" class="btn">Download All Plans Now</a>
 </section>
 
 <!-- FOOTER -->
 <footer>
 <div class="footer-grid">
 <div>
-<h4>Quick Links</h4>
-<a href="privacy.html">Privacy Policy</a>
-<a href="terms.html">Terms & Conditions</a>
-<a href="contact.html">Contact Us</a>
+<h4>About</h4>
+<p>Premium shed plans designed to help you build faster, cheaper, and with confidence.</p>
 </div>
 
 <div>
-<h4>Support</h4>
-<p>Email: hello@happyplaneta.com</p>
-<p>Response within 24–48 hours</p>
+<h4>Legal</h4>
+<a href="#">Privacy Policy</a>
+<a href="#">Terms & Conditions</a>
+<a href="#">Contact</a>
 </div>
 
 <div>
 <h4>Disclosure</h4>
-<p>This website contains affiliate links. If you purchase through these links, we may earn a commission at no extra cost to you.</p>
+<p>This site contains affiliate links. We may earn a commission at no extra cost to you.</p>
 </div>
 </div>
 
 <div class="footer-bottom">
-<p>✔ 60-Day Money-Back Guarantee is provided by the official product vendor.</p>
-<p>© 2026 All Rights Reserved</p>
+<p>© 2026 All Rights Reserved • 60-Day Money-Back Guarantee via official vendor</p>
 </div>
 </footer>
 
