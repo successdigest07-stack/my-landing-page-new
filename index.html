@@ -193,19 +193,33 @@ line-height:1.7;
 .card img{height:200px}
 }
 </style>
+
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '769465692511322');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=769465692511322&ev=PageView&noscript=1"
+/></noscript>
 </head>
 
 <body>
 
-<!-- HERO -->
 <section class="hero">
 <h1>Build a Stunning Shed —<br>Even If You’ve Never Built Before</h1>
 <p>Stop guessing, stop wasting money. Get instant access to proven shed plans trusted by thousands of DIY builders worldwide.</p>
-<a href="https://ryanshedplan.com/main/?affiliate=Charcrl&tid=track" class="btn">Get Instant Access</a>
+<a href="https://ryanshedplan.com/main/?affiliate=Charcrl&tid=track" onclick="fbq('track', 'Lead');" class="btn">Get Instant Access</a>
 <div class="trust">✔ 60-Day Money-Back Guarantee • ✔ Secure Checkout</div>
 </section>
 
-<!-- SHED TYPES -->
 <section class="section">
 <div class="container">
 <h2 style="text-align:center;margin-bottom:40px">Shed Designs For Every Need</h2>
@@ -231,7 +245,6 @@ line-height:1.7;
 </div>
 </section>
 
-<!-- FEATURES -->
 <section class="section" style="background:#f1f5f9">
 <div class="container">
 <h2 style="text-align:center;margin-bottom:40px">What You Get Instantly</h2>
@@ -250,7 +263,6 @@ line-height:1.7;
 </div>
 </section>
 
-<!-- TESTIMONIALS -->
 <section class="section testimonials">
 <div class="container">
 <h2 style="text-align:center;margin-bottom:40px">Trusted By Real Builders</h2>
@@ -287,14 +299,12 @@ line-height:1.7;
 </div>
 </section>
 
-<!-- FINAL CTA -->
 <section class="hero" style="padding:90px 20px">
 <h1>Start Building Today</h1>
 <p>Join thousands of DIY builders creating professional-grade sheds at home.</p>
-<a href="https://ryanshedplan.com/main/?affiliate=Charcrl&tid=track" class="btn">Download All Plans Now</a>
+<a href="https://ryanshedplan.com/main/?affiliate=Charcrl&tid=track" onclick="fbq('track', 'Lead');" class="btn">Download All Plans Now</a>
 </section>
 
-<!-- FOOTER -->
 <footer>
 <div class="footer-grid">
 <div>
